@@ -348,40 +348,19 @@ server {
 }
 ```
 
-
-<span style="color: lightgreen">
 Nota: podemos apreciar que este server block NO tiene DocumentRoot, si no un nuevo location/ que redirige al subdominio de webprueba2.tudomninio.com
-</span>
 
-
-<span style="color: lightyellow">
 Curiosidad: tanto si redirecciono con el proxy_pass al localhost(127.0.0.1) como a mi IP pública (tuip), se redirige al Tomcat Manager, así que necesito poner en el proxy_pass el subdominio:8079 para que realmente se vaya al subdominio webprueba2.tudominio.com
-</span>
 
-
-<span style="color: lightyellow">
 Curiosidad: También puedo hacer que se vea en weprueba2.tudominio.com mi proyecto de de maven en JSP, y que si pongo weprueba2.tudoninio.com:8079 salga el webprueba1 … Esto se conseguiría si en el server block de webprueba2.tudominio.com.conf en la parte de arriba de servername pongo webprueba2.tudominio.com, y en la parte de abajo del proxy_pass pongo webprueba1.tudominio.com:8079
-</span>
 
-
-<span style="color: lightcoral">
 Importante: en el video del profesor dice que puedo cerrar el puerto 8080, porque como el Tomcat está escuchando a través de Nginx, ya no haría falta el 8080, tan solo el 80 para Nginx … pues yo necesito tenerlo abierto, si no, no ve funciona!!
-</span>
 
-
-<span style="color: lightgreen">
 Nota: Para asegurarnos de que el proxy_pass (redireccionamiento de escucha) efectivamente está funcionando, debemos cerrar (eliminar en AWS) el puerto 8079 (o el que se hubiera utilizado para el primer objetivo del tomcat)
-</span>
 
-
-<span style="color: lightgreen">
 Nota: El profesor me ha encargado hacer que el server block de mi portfolio (dominio principal) sea el server block por default, para lo cual, he tenido que añadir a su server_name, un espacio y una barra_baja después del nombre de mi dominio principal... server_name tudominio.com _;
-</span>
 
-
-<span style="color: lightyellow">
 El resumen del server block del webprueba2 en este objetivo es:  
-</span>
 
 ```
 server {
