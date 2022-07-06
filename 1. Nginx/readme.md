@@ -86,52 +86,52 @@ Configuramos el server block para que incluya la conexión con php-fpm
 
 ## 3.1. Vamos a crear un archivo en la ruta /etc/nginx/conf.d/
 
-`sudo vi /etc/nginx/conf.d/sergiocv.com.conf`
+`sudo vi /etc/nginx/conf.d/tudominio.com.conf`
 
 ## 3.2. Dentro de él, vamos a poner lo siguiente:
 
 ```
 server {
-listen 80;
-server_name tudominio.com;
-root /usr/share/nginx/html;
-index index.php index.html index.htm;
-charset UTF-8;
-location / {
-try_files $uri $uri/ =404;
-}
-error_page 404 /404.html;
-error_page 500 502 503 504 /50x.html;
-location = /50x.html {
-root /usr/share/nginx/html;
-}
-location ~ \.php$ {
-try_files $uri =404;
-fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
-fastcgi_index index.php;
-fastcgi_param SCRIPT_FILENAME
-$document_root$fastcgi_script_name;
-include fastcgi_params;
-}
-include fastcgi_params;
-fastcgi_param  SCRIPT_FILENAME
-$document_root$fastcgi_script_name;
-fastcgi_split_path_info ^(.+\.php)(/.+)$;
-fastcgi_index index.php;
-# fastcgi_intercept_errors on;
-# fastcgi_keep_conn on;
-# fastcgi_read_timeout 300;
-# fastcgi_pass   127.0.0.1:9000;
-#fastcgi_pass  unix:/var/run/php-fpm/www.conf;
-#for ubuntu unix:/var/run/php/php8.0-fpm.sock;
-##
-# FastCGI cache config
-##
-# fastcgi_cache_path /var/cache/nginx levels=1:2
-keys_zone=WORDPRESS:10m max_size=1000m inactive=60m;
-# fastcgi_cache_key $scheme$host$request_uri$request_method;
-# fastcgi_cache_use_stale updating error timeout invalid_header http_500;
-fastcgi_cache_valid any 30m;
+  listen 80;
+  server_name tudominio.com;
+  root /usr/share/nginx/html;
+  index index.php index.html index.htm;
+  charset UTF-8;
+  location / {
+    try_files $uri $uri/ =404;
+  }
+  error_page 404 /404.html;
+  error_page 500 502 503 504 /50x.html;
+  location = /50x.html {
+    root /usr/share/nginx/html;
+  }
+  location ~ \.php$ {
+    try_files $uri =404;
+    fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME
+    $document_root$fastcgi_script_name;
+    include fastcgi_params;
+  }
+  include fastcgi_params;
+  fastcgi_param  SCRIPT_FILENAME
+  $document_root$fastcgi_script_name;
+  fastcgi_split_path_info ^(.+\.php)(/.+)$;
+  fastcgi_index index.php;
+  # fastcgi_intercept_errors on;
+  # fastcgi_keep_conn on;
+  # fastcgi_read_timeout 300;
+  # fastcgi_pass   127.0.0.1:9000;
+  #fastcgi_pass  unix:/var/run/php-fpm/www.conf;
+  #for ubuntu unix:/var/run/php/php8.0-fpm.sock;
+  ##
+  # FastCGI cache config
+  ##
+  # fastcgi_cache_path /var/cache/nginx levels=1:2
+  keys_zone=WORDPRESS:10m max_size=1000m inactive=60m;
+  # fastcgi_cache_key $scheme$host$request_uri$request_method;
+  # fastcgi_cache_use_stale updating error timeout invalid_header http_500;
+  fastcgi_cache_valid any 30m;
 }
 ```
 
@@ -151,7 +151,7 @@ sudo vi /usr/share/nginx/html/index.php
 
 ```
 <?php
-phpinfo();
+  phpinfo();
 ?>
 ```
 
@@ -204,17 +204,17 @@ Tanto para el directorio de /usr/share/nginx/html/ como para el directorio del /
 
 Ahora entramos en el server block que ya configuramos para el PHP de Nginx
 
-`sudo vi /etc/nginx/conf.d/sergiocv.com.conf`
+`sudo vi /etc/nginx/conf.d/tudominio.com.conf`
 
 y para añadir la ruta del portfolio, cambiamos solo la parte del principio a...
 
 ```
 server {
-listen 80;
-server_name tudominio.com;
-root /usr/share/nginx/html/portfolio;
-index index.php index.html index.htm;
-charset UTF-8;
+  listen 80;
+  server_name tudominio.com;
+  root /usr/share/nginx/html/portfolio;
+  index index.php index.html index.htm;
+  charset UTF-8;
 ```
 
 ## 4.4. Reseteamos Nginx
@@ -293,11 +293,11 @@ Para ello vamos a copiar éste y a cambiarle el nombre a wordpress.conf
 
 ```
 server {
-listen 80;
-server_name wordpress.tudominio.com;
-root /usr/share/nginx/html/wordpress;
-index index.php index.html index.htm;
-charset UTF-8;
+  listen 80;
+  server_name wordpress.tudominio.com;
+  root /usr/share/nginx/html/wordpress;
+  index index.php index.html index.htm;
+  charset UTF-8;
 ```
 
 - Paralelamente a esto, tenemos que ir ahora a IONOS 
