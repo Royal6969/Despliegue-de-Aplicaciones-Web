@@ -367,3 +367,22 @@ Importante: en el video del profesor dice que puedo cerrar el puerto 8080, porqu
 <span style="color: lightgreen">
 Nota: Para asegurarnos de que el proxy_pass (redireccionamiento de escucha) efectivamente está funcionando, debemos cerrar (eliminar en AWS) el puerto 8079 (o el que se hubiera utilizado para el primer objetivo del tomcat)
 </span>
+
+<span style="color: lightgreen">
+Nota: El profesor me ha encargado hacer que el server block de mi portfolio (dominio principal) sea el server block por default, para lo cual, he tenido que añadir a su server_name, un espacio y una barra_baja después del nombre de mi dominio principal... server_name tudominio.com _;
+</span>
+
+<span style="color: lightyellow">
+El resumen del server block del webprueba2 en este objetivo es:  
+</span>
+
+```
+server {
+   listen 80;
+   server_name webprueba2.tudominio.com;
+
+   location / {
+      proxy_pass http://127.0.0.1:8079;
+   }
+}
+```
