@@ -71,6 +71,7 @@ Ya solamente faltaría hacer el certificado de la solicitud, y que lo firme la A
 ![](./img/5.png)
 
 Video Extra 1: https://www.youtube.com/watch?v=uPNFENxL16U
+
 Video Extra 2: https://www.youtube.com/watch?v=y97QhzWNc7M
 
 # 3. Configuración de Apache
