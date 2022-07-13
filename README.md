@@ -2,8 +2,9 @@
 
 AWS - Amazon Linux 2
 
+Descargar e instalar Putty
+Descargar e instalar filezilla
 AWS - crear instancia
-
 Ionos - crear dominio
 
 Censuras en imágenes - IP y dominio
