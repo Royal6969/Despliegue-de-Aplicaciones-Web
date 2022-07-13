@@ -340,3 +340,55 @@ Por último, como ya terminamos comentando antes, en AWS vamos al grupo de segur
 Posteriormente, dentro del servidor, resetamos Tomcat y Nginx con systemctl restart.
 
 Y si ahora vamos al Chrome, y ponemos webprueba2.tudominio.com , podremos ver nuestro proyecto desplegado en Tomcat pero siendo Nginx quien nos lo muestra... y sin necesidad de poner el puerto al final de la URL.
+
+### Preguntas de Examen
+
+> P: ¿Qué es Tomcat?
+
+> R: Apache Tomcat, es una opción reconocida entre los desarrolladores web para crear y mantener webs dinámicas y aplicaciones basadas en Java. Puedes utilizar Tomcat como contenedor de servlets para compilar y ejecutar aplicaciones web realizadas en Java, además de como servidor web autónomo en entornos con alto nivel de tráfico y alta disponibilidad.
+
+Tomcat, también llamado Apache Tomcat o Jakarta Tomcat es un contenedor open source de servlets para la implementación de Java Servlet, JavaServer Pages (JSP), Java Expression Language y Java WebSocket. Las especificaciones de estos son desarrolladas bajo el Java Community Process.
+
+Existe una confusión de conceptos entre Apache Tomcat y Apache, esto se debe a que coloquialmente al servidor Apache HTTP se le conoce como Apache. Tanto Tomcat como Apache HTTP son proyectos de Apache Software Foundation, cada uno implementado en un lenguaje diferente, Apache Tomcat en Java y Apache HTTP en C y XML. Aunque la diferencia fundamental es que el objetivo de Tomcat es servir específicamente aplicaciones Java, mientras que Apache es un servidor HTTP de propósito general.
+
+> P: ¿Cómo funciona Tomcat?
+
+> R: Tomcat puede definirse como servidor web por sí mismo, aunque normalmente se utiliza en combinación con otros productos por ejemplo Apache, para mejorar su soporte y realzar sus características. Tomcat puede ejecutar servlets y Java Server Pages (JSP). Al haber sido escrito en Java, funciona en cualquier sistema operativo que disponga de la máquina virtual Java.
+
+> P: ¿Qué es el Nginx Proxy?
+
+> R: Un proxy inverso se ubica frente a un servidor web y recibe todas las solicitudes antes de que lleguen al servidor de origen. Funciona de manera similar a un proxy de reenvío, con la excepción de que en este caso es el servidor web el que utiliza el proxy y no el usuario o el cliente. Los proxies inversos se utilizan normalmente para mejorar el rendimiento, la seguridad y la fiabilidad del servidor web.
+
+Por ejemplo, puedes tener un sitio, que no usa WordPress, alojado en el dominio example.com del servidor A y tener tu blog en WordPress en la URL example.com/blog alojada en el servidor B. Puedes lograrlo añadiendo un proxy inverso para el servidor que aloja tu sitio principal. Puedes configurar el proxy inverso para redirigir las solicitudes del blog a un servidor diferente.
+
+![](./img/26.jpg)
+
+> P: ¿Diferencias entre proxy inverso y proxy de reenvío?
+
+> R: Un servidor proxy inverso actúa como una fachada para que el servidor de origen mantenga el anonimato y mejore la seguridad, al igual que un usuario/cliente puede utilizar un proxy de reenvío para lograr lo mismo. Garantiza que ningún usuario o cliente se comunique directamente con el servidor de origen.
+
+Proxy de Reenvío:
+![](./img/27.png)
+
+Proxy inverso:
+![](./img/28.png)
+
+La diferencia entre un proxy de reenvío y un proxy inverso es menor, pero funcionan de manera diferente. Ambos pueden trabajar juntos, ya que no hay superposición en su funcionamiento. Normalmente, los usuarios/clientes utilizan un proxy de reenvío, mientras que los servidores de origen utilizan un proxy inverso.
+
+Proxy de Reenvío vs. Proxy Inverso:
+![](./img/29.png)
+
+> P: ¿Beneficios de utilizar el Nginx Proxy?
+
+> R: Algunas de sus principales ventajas son:
+
+- Balancear la carga
+- Equilibrio de Carga de Servidor Global (Global Server Load Balancing – GSLB)
+- Seguridad mejorada
+- Potente Caching
+- Compresión superior
+- Cifrado SSL optimizado
+- Mejores pruebas A/B
+- Monitoreo y registro del tráfico
+
+Enlace extra de interés: https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/
