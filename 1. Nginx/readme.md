@@ -363,5 +363,7 @@ fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
 - Este socket lo ha creado php-fpm al activarse
 
 Video Extra 1: https://www.youtube.com/watch?v=8B5wLDpkz0c
+
 Video Extra 2: https://www.youtube.com/watch?v=HyxatbU40x8
+
 Video Extra 3: https://www.youtube.com/watch?v=39uiw0NNozg
