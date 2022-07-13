@@ -1,6 +1,6 @@
 # Nginx HTTPS
 
-Nota: En este punto, en IONOS, he habilitado que mi dominio principal (tudominio.com) apunte también a mi IP (es decir, he activado verdaderamente mi dominio).
+Nota: En este punto, en IONOS, he habilitado que mi dominio principal (tudominio.com) apunte también a mi IP (es decir, he activado verdaderamente mi dominio), ya que antes estaba apuntando a mi ip con el dominio y la triple w delante (www.tudominio.com), pero ahora lo he modificado para que mi ip apunte solo al nombre de mi dominio, sin la triple w, es decir, tudominio.com.
 
 ![](./img/1.png)
 
