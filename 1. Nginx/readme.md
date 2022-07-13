@@ -1,4 +1,4 @@
-# 1. Configurar Nginx
+# 1. Instalar y Configurar Nginx
 
 ## 1.1. Instalar Nginx y PHP
 
@@ -398,7 +398,49 @@ server {
 }
 ```
 
-# Preguntas y Cuestiones:
+# Preguntas de Examen:
+
+> P: ¿Qué es Nginx?
+
+> R: Nginx, es un servidor web de código abierto que, desde su éxito inicial como servidor web, ahora también es usado como proxy inverso, cache de HTTP, y balanceador de carga.
+
+Nginx creado originalmente por Igor Sysoev, y tuvo su primer lanzamiento público en octubre de 2004. Igor concibió inicialmente el software como una respuesta al problema C10K, que se refiere al problema de rendimiento de manejar 10,000 conexiones concurrentes.
+
+> P: ¿Cómo funciona Nginx?
+
+> R: Nginx está diseñado para ofrecer un bajo uso de memoria y alta concurrencia. En lugar de crear nuevos procesos para cada solicitud web, Nginx usa un enfoque asincrónico basado en eventos donde las solicitudes se manejan en un solo hilo.
+
+Con Nginx, un proceso maestro puede controlar múltiples procesos de trabajo. El proceso maestro mantiene los procesos de trabajo, y son estos lo que hacen el procesamiento real.
+
+Algunas características comunes que se ven en Nginx incluyen:
+
+- Proxy inverso con caché
+- IPv6
+- Balanceo de carga
+- Soporte FastCGI con almacenamiento en caché
+- Websockets
+- Manejo de archivos estáticos, archivos de índice y auto indexación
+- TLS / SSL con SNI
+
+> P: ¿Qué es PHP-fpm?
+
+> R: PHP-FPM es la implementación alternativa más popular de PHP FastCGI, que cuenta con características adicionales realmente útiles para sitios web de alto tráfico. Estas son algunas de ellas:
+
+- Gestión avanzada que permite detener/arrancar procesos fácilmente.
+- Posibilidad de iniciar hilos de procesos con diferentes uid/gid/chroot/environment y distintos php.ini; sustituye a safe_mode.
+- Registro stdout y stderr.
+- Reinicio de emergencia en caso de destrucción accidental del caché opcode.
+- Soporte acelerado de subidas.
+- Configuración de variable slowlog; para detectar qué funciones tardan en ejecutarse más de lo habitual.
+- Basado en archivos de configuración php.ini.
+- Mejora de FastCGI, como fastcgi_finish_request(); una función especial para detener y descargar todos los datos mientras se continúa haciendo un proceso más largo como la conversión de vídeos o el procesamiento de estadísticas.
+- Estadísticas básicas (similar al módulo mod_status de Apache). ¡NUEVO!
+
+> P: ¿Qué sinergia positiva existe entre Nginx y PHP-fpm?
+
+> R: Nginx como servidor web de alto rendimiento estable, y con un consumo de recursos muy bajo, es el compañero ideal de PHP-FPM. Nginx tiene una arquitectura asíncrona que es mucho más escalable, basada en eventos. Además, al usar Nginx con PHP-FPM se mejora la eficiencia a nivel de consumo de memoria.
+
+PHP funciona como un servicio separado al usar PHP-FPM. Al usar esta versión de PHP como intérprete del lenguaje, las peticiones se procesan a través de un socket TCP/IP; de modo que el servidor web Nginx solo maneja las peticiones HTTP y PHP-FPM interpreta el código PHP. El hecho de tener dos servicios separados es clave para ganar en eficiencia.
 
 > P: ¿Qué relación existe entre Nginx y PHP-fpm?
 
