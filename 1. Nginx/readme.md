@@ -233,6 +233,30 @@ Nota: ATENCIÓN! previamente a esto, configuramos el server block de tudominio.c
 
 Para que vuelva a funcionar y vuelva a poder verse la información de PHP poniendo en el navegador la misma dirección que antes... debo mover el archivo de index.php del DirectoryRoot de Nginx hacia el directorio del portfolio, cambiándole el nombre a info.php ...
 
+### Resumen server block
+
+```
+server {
+  listen 80;
+  server_name tudominio.com;
+
+  root /usr/share/nginx/html/portfolio;
+  index index.html index.htm;
+  charset UTF-8;
+
+  location / {
+    try_files $uri $uri/ =404;
+  }
+
+  error_page 404 /404.html;
+
+  include fastcgi_params;
+  fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+
+  fastcgi_cache_valid any 30m;
+}
+```
+
 ## 5. Wordpress
 
 Vamos a recordar y proceder con la instalación de wordpress a través de la guía que ya seguimos en su momento cuando lo hicimos todo esto con Apache...
@@ -344,6 +368,35 @@ y con esto ya estaría todo listo ! ...
 ![](./img/16.png)
 
 ![](./img/17.png)
+
+```
+server {
+  listen 80;
+  server_name wordpress.tudominio.com;
+
+  root /usr/share/nginx/html/wordpress;
+  index index.php index.html index.htm;
+
+  location / {
+    try_files $uri $uri/ =404;
+  }
+
+  error_page 404 /404.html;
+
+  location ~ \.php$ {
+    try_files $uri =404;
+    fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    include fastcgi_params;
+  }
+
+  include fastcgi_params;
+  fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+  fastcgi_split_path_info ^(.+\.php)(/.+)$;
+  fastcgi_index index.php;
+}
+```
 
 # Preguntas y Cuestiones:
 
