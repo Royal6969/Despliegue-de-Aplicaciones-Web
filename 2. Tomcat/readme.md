@@ -310,11 +310,9 @@ server {
 
 Nota: podemos apreciar que este server block NO tiene DocumentRoot, si no un nuevo location/ que redirige al subdominio de webprueba2.tudomninio.com
 
-Curiosidad: tanto si redirecciono con el proxy_pass al localhost(127.0.0.1) como a mi IP pública (tuip), se redirige al Tomcat Manager, así que necesito poner en el proxy_pass el subdominio:8079 para que realmente se vaya al subdominio webprueba2.tudominio.com
+Curiosidad: tanto si redirecciono con el proxy_pass al localhost(127.0.0.1) como a mi IP pública (tu ip), se redirige al Tomcat Manager, así que necesito poner en el proxy_pass el subdominio:8079 para que realmente se vaya al subdominio webprueba2.tudominio.com
 
-Curiosidad: También puedo hacer que se vea en weprueba2.tudominio.com mi proyecto de de maven en JSP, y que si pongo weprueba2.tudoninio.com:8079 salga el webprueba1 … Esto se conseguiría si en el server block de webprueba2.tudominio.com.conf en la parte de arriba de servername pongo webprueba2.tudominio.com, y en la parte de abajo del proxy_pass pongo webprueba1.tudominio.com:8079
-
-Importante: en el video del profesor dice que puedo cerrar el puerto 8080, porque como el Tomcat está escuchando a través de Nginx, ya no haría falta el 8080, tan solo el 80 para Nginx … pues yo necesito tenerlo abierto, si no, no ve funciona!!
+Curiosidad: También puedo hacer que se vea en weprueba2.tudominio.com mi proyecto de maven en JSP, y que si pongo weprueba2.tudoninio.com:8079 salga el webprueba1 … Esto se conseguiría si en el server block de webprueba2.tudominio.com.conf en la parte de arriba de servername pongo webprueba2.tudominio.com, y en la parte de abajo del proxy_pass pongo webprueba1.tudominio.com:8079
 
 Nota: Para asegurarnos de que el proxy_pass (redireccionamiento de escucha) efectivamente está funcionando, debemos cerrar (eliminar en AWS) el puerto 8079 (o el que se hubiera utilizado para el primer objetivo del tomcat)
 
