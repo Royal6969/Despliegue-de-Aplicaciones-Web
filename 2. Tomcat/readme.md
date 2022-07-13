@@ -136,7 +136,7 @@ Una vez hecho esto solo nos queda ir al directorio webPrueba1 y poner el el Root
 
 Video Extra: https://www.youtube.com/watch?v=PXozxgEMVss&ab_channel=LDTS
 
-# 2. EXTRA. ¿ Cómo hacer un proyecto en VS y exportarlo a .war?
+# 2. EXTRA. ¿ Cómo hacer un proyecto de Maven en JSP en VS y exportarlo a .war?
 
 Para reforzar lo aprendido, voy a realizar los mismos pasos para desplegar un proyecto en Tomcat, pero esta vez, creando un proyecto de maven en JSP con un nuevo subdominio (webprueba2.tudominio.com)
 
@@ -317,3 +317,28 @@ Curiosidad: También puedo hacer que se vea en weprueba2.tudominio.com mi proyec
 Importante: en el video del profesor dice que puedo cerrar el puerto 8080, porque como el Tomcat está escuchando a través de Nginx, ya no haría falta el 8080, tan solo el 80 para Nginx … pues yo necesito tenerlo abierto, si no, no ve funciona!!
 
 Nota: Para asegurarnos de que el proxy_pass (redireccionamiento de escucha) efectivamente está funcionando, debemos cerrar (eliminar en AWS) el puerto 8079 (o el que se hubiera utilizado para el primer objetivo del tomcat)
+
+### Resumen server block
+
+```
+server {
+  listen 80;
+  server_name webprueba2.tudominio.com;
+
+  location / {
+    proxy_pass http://127.0.0.1:8079;
+  }
+}
+```
+
+## 4.3. Cerrar puerto y resetear
+
+Por último, como ya terminamos comentando antes, en AWS vamos al grupo de seguridad de nuestra instancia para cerrar el antiguo puerto del Tomcat (el 8079 o 8080, o cual sea en tu caso)
+
+![](./img/24.png)
+
+![](./img/25.png)
+
+Posteriormente, dentro del servidor, resetamos Tomcat y Nginx con systemctl restart.
+
+Y si ahora vamos al Chrome, y ponemos webprueba2.tudominio.com , podremos ver nuestro proyecto desplegado en Tomcat pero siendo Nginx quien nos lo muestra... y sin necesidad de poner el puerto al final de la URL.
