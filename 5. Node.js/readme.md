@@ -49,6 +49,10 @@ Ahora vamos a instalar el gestor de paquetes NPM:
 
 ![](./img/4.png)
 
+Nota: Para instalar la versión de npm más reciente y estable, en vez del número de la versión, poner latest:
+
+`npm install -g npm@latest`
+
 ## 1.4. Subir un proyecto al servidor
 
 Vamos a crear una carpeta para albergar en ella uno de mis proyectos de angular que he hecho en clase este año … mkdir /opt/angular/nodePrueba1/
