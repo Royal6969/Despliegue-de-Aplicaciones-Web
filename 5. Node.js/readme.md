@@ -21,7 +21,7 @@ Nota: Consulta cuál es la versión más actual en la documentación oficial de 
 
 Cada vez que entremos al servidor, y queramos usar el CLI de NVM, tendremos que abrir el archivo nvm.sh con el comando abrir (.)
 
-`. /opt/angular/.nvm/nvm.sh`
+`. /opt/apps/.nvm/nvm.sh`
 
 Para comprobar si tenemos nvm instalado correctamente, veámos su versión: 
 
