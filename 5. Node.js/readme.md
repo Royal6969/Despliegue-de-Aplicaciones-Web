@@ -11,7 +11,7 @@ Buscando rápidamente por Google, podemos encontrar fácilmente este tipo de eje
 
 ## 1.1. NVM CLI
 
-Vamos a la carpeta de /opt/ y creamos una carpeta llamada /opt/angular/ y en ella, ejecutamos el siguiente comando para descargar el CLI de NVM
+Vamos a la carpeta de /opt/ y creamos una carpeta llamada /opt/apps/ y en ella, ejecutamos el siguiente comando para descargar el CLI de NVM
 
 `wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/nvm.sh | bash`
 
