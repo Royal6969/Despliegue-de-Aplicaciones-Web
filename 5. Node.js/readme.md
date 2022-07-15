@@ -55,7 +55,7 @@ Nota: Para instalar la versión de npm más reciente y estable, en vez del núme
 
 ## 1.4. Subir un proyecto al servidor
 
-Vamos a crear una carpeta para albergar en ella uno de mis proyectos de angular que he hecho en clase este año … mkdir /opt/angular/nodePrueba1/
+Vamos a crear una carpeta para albergar en ella uno de mis proyectos de angular que he hecho en clase este año … mkdir /opt/apps/angular/nodePrueba1/
 
 Para subir el proyecto, podemos hacerlo de dos formas:
 
