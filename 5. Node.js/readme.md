@@ -15,6 +15,8 @@ Vamos a la carpeta de /opt/ y creamos una carpeta llamada /opt/apps/ y en ella, 
 
 `wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/nvm.sh | bash`
 
+Nota: Consulta cuál es la versión más actual en la documentación oficial de NVM: https://github.com/nvm-sh/nvm
+
 ## 1.2. Ejecutar el cli
 
 Cada vez que entremos al servidor, y queramos usar el CLI de NVM, tendremos que abrir el archivo nvm.sh con el comando abrir (.)
