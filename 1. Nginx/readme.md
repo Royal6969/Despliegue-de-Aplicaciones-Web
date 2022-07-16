@@ -22,6 +22,8 @@ Video Extra 2: Setup WordPress with Nginx and PHP-FPM
 
 https://www.youtube.com/watch?v=3jQnrBLE-SY
 
+Y una vez que ya hemos instalado Nginx y PHP...
+
 ## 1.1. Vamos al archivo php.ini
 
 `sudo vi /etc/php.ini`
