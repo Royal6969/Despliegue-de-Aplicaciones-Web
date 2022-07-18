@@ -100,6 +100,10 @@ Ahora vamos a IONOS para crear un nuevo subdominio (de la misma forma que creamo
 
 ![](./img/5.png)
 
+Nota: como ya comentaba en el objetivo anterior, antes de empezar con los objetivos, es decir, preparando la asignatura tal como la dejamos el año pasado, cometí el error de crear un subdominio para el portfolio, pero eso ya lo corregí, poniendo el portfolio en mi dominio principal, de modo he retocado un poco esta imagen para que se vea bien.
+
+Nota: lo de que mi dominio no está en uso, también comenté en el readme principal del repositorio, que fue porque al principio, cuando fui a enlazar mi dominio con un servername (registro dns tipo A) en Ionos, en vez de poner el caracter @ (que significa "este dominio mismo") puse la triple w... cosa que estuvo mal y no es necesaria, así que ustedes deben poner el servername del registro dns tipo A de su dominio como un caracter @... y de esa manera ya si está bien asociado el dominio y sí aparece en Ionos el mensaje de que sí está el dominio en uso.
+
 ### 1.3.4. Registro tipo A
 
 Ahora tenemos que añadirle a este subdominio el registro tipo A que apunta a mi IP
