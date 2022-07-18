@@ -10,7 +10,10 @@ Ionos - crear dominio
 
 Censuras en imágenes - IP y dominio
 
+Nota: El objetivo "0. AWS - Ionos" no constituye ningún objetivo en sí que sea evaluable por el profesor, si no la "puesta a punto" del servidor para empezar realmente la asignatura y su materia, es decir, trata sobre preparar algunas cosas para poder partir desde un punto lo más cercano y parecido posible a como acabó la asignatura de Sistemas Informáticos el año pasado.
+
 Nota: Al principio, cuando asocié el dominio a la ip de la instancia, lo hice con la triple w delante del dominio (www.tudominio.com)
+Nota: Al principio, en vez de poner el portfolio en mi dominio principal, lo puse en un subdominio.
 
 Nota: Es importante, sobretodo para el objetivo del Tomcat, deshabilitar el firewall interno del servidor
 
