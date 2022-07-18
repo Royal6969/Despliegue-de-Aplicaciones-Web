@@ -134,7 +134,7 @@ Abrimos este archivo de ssl.conf, y buscamos donde empiece el tag de VirtualHost
 
 ## 3.4. Resetear Apache
 
-Si ejecutamos ahora un, systemctl restart httpd, vemos que me pide el passphrase de la clave privada… tupassword … y ya estaría !!
+Si ejecutamos ahora un, `systemctl restart httpd`, vemos que me pide el passphrase de la clave privada… tupassword … y ya estaría !!
 
 Video Extra: https://www.youtube.com/watch?v=UTu1y_geX_Y
 
