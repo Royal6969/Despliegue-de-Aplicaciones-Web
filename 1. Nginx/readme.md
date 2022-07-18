@@ -331,6 +331,8 @@ De no ser así, tendríamos que volver a crearlo y volver a asociarlo a nuestra 
 
 ![](./img/9.png)
 
+Nota: Como ya había comentado antes, en los primeros objetivos de Nginx-Tomcat-ApacheSSL, pueden aparecer imágenes como ésta, en la que se ve que estamos en la sección de los subdominios en Ionos, y he retocado la foto para que aparezca en tal lista "tudominio.com", y es que al principio de todo, cometí el error de escribir el servername de mi dominio principal con la triple w ... y en este caso en específico, al principio creé un subdominio para el portfolio, pero no era así, si no que el portfolio tiene que ir directamente en tu dominio principal ... lo que va con subdominio es el wordpress.
+
 ![](./img/10.png)
 
 ![](./img/11.png)
