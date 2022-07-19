@@ -178,7 +178,7 @@ Nota: en ciertas ocasiones, algunos usuarios cuentan que, cuando llegaban a la p
 
 Este error se resuelve con tan sólo instalar MySQLi: `yum install php-mysqli`, y ahora ya sí que aparece el menú en chrome (IP/wordpress) para empezar a configurarlo.
 
-Nota: Recuerda que la instalación final, puede llevarse a cabo tanto desde dentro del servidor en los archivos de configuración de wordpress (tal como explica la guía oficial de AWS), o en el navegador a través de nuestro dominio asociado, http://www.tudominio.com/wordpress/wp-admin/setup-config.php
+Nota: Recuerda que la instalación final, puede llevarse a cabo tanto desde dentro del servidor en los archivos de configuración de wordpress (tal como explica la guía oficial de AWS), o en el navegador a través de nuestro dominio asociado, http://tudominio.com/wordpress/wp-admin/setup-config.php
 
 Nota: (opcionalmente) Para instalar el WP-CLI: https://wp-cli.org/es/
 
