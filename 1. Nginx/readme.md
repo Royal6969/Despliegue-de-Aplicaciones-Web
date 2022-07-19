@@ -313,7 +313,7 @@ Para ello vamos a copiar éste y a cambiarle el nombre a wordpress.conf
 ```
 server {
   listen 80;
-  server_name wp.tudominio.com;
+  server_name wordpress.tudominio.com;
   root /usr/share/nginx/html/wordpress;
   index index.php index.html index.htm;
   charset UTF-8;
@@ -321,7 +321,7 @@ server {
 
 - Paralelamente a esto, tenemos que ir ahora a IONOS 
 
-Vemos si sigue creado mi subdominio de wp.tudominio.com , y de ser así, si sigue conectado a nuestra IP (servidor principal) a través del registro A de DNS ...
+Vemos si sigue creado mi subdominio de wordpress.tudominio.com , y de ser así, si sigue conectado a nuestra IP (servidor principal) a través del registro A de DNS ...
 
 De no ser así, tendríamos que volver a crearlo y volver a asociarlo a nuestra IP ...
 
@@ -347,7 +347,7 @@ Nota: Como ya había comentado antes, en los primeros objetivos de Nginx-Tomcat-
 
 - Hacemos un `systemctl restart nginx`
 
-Y si ahora vamos al navegador y ponemos wp.tudominio.com, nos sale la intro de la instalación de wordpress para seleccionar el idioma...
+Y si ahora vamos al navegador y ponemos wordpress.tudominio.com, nos sale la intro de la instalación de wordpress para seleccionar el idioma...
 
 ```
 db-wordpress: wp
@@ -376,7 +376,7 @@ y con esto ya estaría todo listo ! ...
 ```
 server {
   listen 80;
-  server_name wp.tudominio.com;
+  server_name wordpress.tudominio.com;
 
   root /usr/share/nginx/html/wordpress;
   index index.php index.html index.htm;
