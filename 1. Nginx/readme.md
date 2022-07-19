@@ -345,6 +345,8 @@ Nota: Como ya había comentado antes, en los primeros objetivos de Nginx-Tomcat-
 
 ![](./img/15.png)
 
+Nota: cuando estemos creando un registro dns tipo A para asociar un subdominio a nuestra instancia ec2 (ip), no poner nunca en el nombre del host, el prefijo de la triple w, es decir, no poner nunca delante el www. si no poner directamente el nombre del subdominio (en este caso, wordpress)
+
 - Hacemos un `systemctl restart nginx`
 
 Y si ahora vamos al navegador y ponemos wordpress.tudominio.com, nos sale la intro de la instalación de wordpress para seleccionar el idioma...
