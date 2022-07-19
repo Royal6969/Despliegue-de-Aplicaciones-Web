@@ -171,7 +171,7 @@ Aquí vamos a crear un archivo llamado index.php (porque en el server block que 
 
 `sudo systemctl restart php-fpm`
 
-Abrimos una nueva pestaña en nuestro navegador, y ponemos nuestra IP, o mejor aún, nuestro dominio (www.tudominio.com), y añadimos /index.php
+Abrimos una nueva pestaña en nuestro navegador, y ponemos nuestra IP, o mejor aún, nuestro dominio (tudominio.com), y añadimos /index.php
 
 Y efectivamente nos sale la lectura de la función infophp() mostrándonos toda la información acerca de nuestro php, lo cual quiere decir que nuestro php funciona perfectamente.
 
@@ -227,11 +227,11 @@ server {
 
 `sudo systemctl restart nginx`
 
-y vamos al navegador y si ponemos www.tudominio.com ...
+y vamos al navegador y si ponemos tudominio.com ...
 
 FUNCIONA !! ya sale el portfolio a través de Nginx !!
 
-Nota: ATENCIÓN! previamente a esto, configuramos el server block de tudominio.com.conf para que enrutara hacia el DirectoryRoot de Nginx y allí pudiese acceder precísamente al archivo de index.php, el cual albergaba la función de phpinfo(), la cual si en el navegador poníamos www.tudominio.com/index.php nos llevaba a toda la información de nuestro PHP ... pero ahora NO, porque en ese mismo server block, ahora hemos enrutado hacia dentro del DirectoryRoot dentro de portfolio ...
+Nota: ATENCIÓN! previamente a esto, configuramos el server block de tudominio.com.conf para que enrutara hacia el DirectoryRoot de Nginx y allí pudiese acceder precísamente al archivo de index.php, el cual albergaba la función de phpinfo(), la cual si en el navegador poníamos tudominio.com/index.php nos llevaba a toda la información de nuestro PHP ... pero ahora NO, porque en ese mismo server block, ahora hemos enrutado hacia dentro del DirectoryRoot dentro de portfolio ...
 
 Para que vuelva a funcionar y vuelva a poder verse la información de PHP poniendo en el navegador la misma dirección que antes... debo mover el archivo de index.php del DirectoryRoot de Nginx hacia el directorio del portfolio, cambiándole el nombre a info.php ...
 
@@ -313,7 +313,7 @@ Para ello vamos a copiar éste y a cambiarle el nombre a wordpress.conf
 ```
 server {
   listen 80;
-  server_name wordpress.tudominio.com;
+  server_name wp.tudominio.com;
   root /usr/share/nginx/html/wordpress;
   index index.php index.html index.htm;
   charset UTF-8;
@@ -321,7 +321,7 @@ server {
 
 - Paralelamente a esto, tenemos que ir ahora a IONOS 
 
-Vemos si sigue creado mi subdominio de www.wordpress.tudominio.com , y de ser así, si sigue conectado a nuestra IP (servidor principal) a través del registro A de DNS ...
+Vemos si sigue creado mi subdominio de wp.tudominio.com , y de ser así, si sigue conectado a nuestra IP (servidor principal) a través del registro A de DNS ...
 
 De no ser así, tendríamos que volver a crearlo y volver a asociarlo a nuestra IP ...
 
@@ -345,9 +345,9 @@ Nota: Como ya había comentado antes, en los primeros objetivos de Nginx-Tomcat-
 
 ![](./img/15.png)
 
-- Hacemos un sudo systemctl restart nginx
+- Hacemos un `systemctl restart nginx`
 
-Y si ahora vamos al navegador y ponemos www.wordpress.tudominio.com, nos sale la intro de la instalación de wordpress para seleccionar el idioma...
+Y si ahora vamos al navegador y ponemos wp.tudominio.com, nos sale la intro de la instalación de wordpress para seleccionar el idioma...
 
 ```
 db-wordpress: wp
@@ -376,7 +376,7 @@ y con esto ya estaría todo listo ! ...
 ```
 server {
   listen 80;
-  server_name wordpress.tudominio.com;
+  server_name wp.tudominio.com;
 
   root /usr/share/nginx/html/wordpress;
   index index.php index.html index.htm;
