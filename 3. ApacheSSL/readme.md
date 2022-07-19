@@ -219,7 +219,7 @@ Nota: Para tenerlo finalmente tan bien ordenado como el profesor, he creado un d
 
 ![](./img/25.png)
 
-Hacemos un systemctl restart httpd y en el Chrome vemos que ...
+Hacemos un `systemctl restart httpd` y en el Chrome vemos que ...
 
 ![](./img/26.png)
 
