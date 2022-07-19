@@ -177,9 +177,7 @@ Y efectivamente nos sale la lectura de la función infophp() mostrándonos toda 
 
 ![](./img/5.png)
 
-Para el server block, he seguido esta guía:
-
-https://awswithatiq.com/setup-php-nginx-in-amazon-linux-2/
+Para el server block, he seguido esta guía: https://awswithatiq.com/setup-php-nginx-in-amazon-linux-2/
 
 # 4. Despliegue en Nginx
 
