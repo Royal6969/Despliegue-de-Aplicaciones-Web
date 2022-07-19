@@ -140,13 +140,13 @@ Video Extra: https://www.youtube.com/watch?v=UTu1y_geX_Y
 
 # 4. Comportamiento de los Navegadores
 
-Si introduzco ahora en el Chrome mi dominio www.tudominio.com ...
+Si introduzco ahora en el Chrome mi dominio tudominio.com ...
 
 ![](./img/11.png)
 
 ## 4.1. Firefox
 
-Vamos a abrir nuestra web ahora en firefox, poniendo en la URL https://www.tudominio.com
+Vamos a abrir nuestra web ahora en firefox, poniendo en la URL https://tudominio.com
 
 ![](./img/12.png)
 
@@ -162,7 +162,7 @@ Si en el Firefox, le doy a configuración, y a Privacidad/Seguridad, y bajo hast
 
 ![](./img/15.png)
 
-Si volvemos a poner nuestra direccion (https://www.tudominio.com)
+Si volvemos a poner nuestra direccion (https://tudominio.com)
 
 ![](./img/16.png)
 
@@ -295,7 +295,7 @@ Así que le doy a importar, selecciono el archivo que previamente descargamos de
 
 En el nuevo cuadro de diálogo que nos sale, marcamos la opción de que esta CA nuestra pueda identificar sitios web, y le damos a aceptar…
 
-Cerramos firefox, entramos, (opcionalmente comprobamos que nuestra CA (FakeZone) ya se encuentra entre las otra CA de la lista, y ponemos en el buscador https://www.tudominio.com y … funcionó !! sale el candado !!
+Cerramos firefox, entramos, (opcionalmente comprobamos que nuestra CA (FakeZone) ya se encuentra entre las otra CA de la lista, y ponemos en el buscador https://tudominio.com y … funcionó !! sale el candado !!
 
 ![](./img/39.png)
 
