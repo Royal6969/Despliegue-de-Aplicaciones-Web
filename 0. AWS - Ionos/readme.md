@@ -141,6 +141,8 @@ Nota: vuelvo a recordar que las censuras de las imágenes corresponden a mi domi
 
 Si ahora vamos a nuestro servidor y ejecutamos el clásico comando de `nslookup tudominio.com`, podremos comprobar que nuestro dominio ya está enlazado a nuestra instancia (ip) correctamente.
 
+Nota: cuando estamos en la pantalla de creación del registro dns tipo A para asociar nuestro dominio principal a la ip de nuestra instancia, como nombre del host, no hay que escribir otra vez el nombre de nuestro dominio, si no que ponemos el caracter "@", que significa "este mismo dominio".
+
 Nota: quisiera recordar, que al principio me confundí en esta parte, y cuando creé por primera vez el registro dns de mi dominio, lo puse con la tripe w, es decir, www.tudominio.com, y esto no debe ser así, es decir, tienes que poner directamente tu dominio, sin las w (tudominio.com). He visto conveniente recordarte este detalle confuso que tuve para que tú no caigas en lo mismo, y también porque quizás en algunas imagenes de los primeros objetivos (nginx, tomcat y apacheSSL) aparecerá mi dominio con la triple w, pero ya en el objetivo del nginxSSL, cambié bien el servername a mi dominio sólo, sin la triple w... De hecho, cuando tenía el www. delante de mi dominio, Ionos me decía que aún no estaba usando realmente mi dominio.
 
 ## 2.3. Subdominio
