@@ -296,22 +296,22 @@ Vamos a volver a crear un usuario y una BBDD para el nuevo wordpress de Nginx
 ## 5.3. Ahora vamos a crear y configurar un nuevo server block para wordpress
 
 - Vamos hacia /etc/nginx/conf.d/
-- Creamos el archivo wordpress.conf
+- Creamos el archivo wp.conf (o wordpress.conf, o con el nombre que te orientes mejor)
 
-`sudo vi etc/nginx/conf.d/wordpress`
+`sudo vi etc/nginx/conf.d/wp.conf`
 
 Nota: Como ya tenemos el server block de mi servidor principal, tan sólo habría que cambiarle un par de palabras... 
 
-Para ello vamos a copiar éste y a cambiarle el nombre a wordpress.conf
+Para ello vamos a copiar éste y a cambiarle el nombre a wp.conf
 
 `sudo cp /etc/nginx/conf.d/tudominio.com.conf /etc/nginx/conf.d/wordpress.conf`
 
-- Entramos en el nuevo archivo de wordpress.conf y le cambiamos el principio a:
+- Entramos en el nuevo archivo de wp.conf y le cambiamos el principio a:
 
 ```
 server {
   listen 80;
-  server_name wordpress.tudominio.com;
+  server_name wp.tudominio.com;
   root /usr/share/nginx/html/wordpress;
   index index.php index.html index.htm;
   charset UTF-8;
@@ -319,7 +319,7 @@ server {
 
 - Paralelamente a esto, tenemos que ir ahora a IONOS 
 
-Vemos si sigue creado mi subdominio de wordpress.tudominio.com , y de ser así, si sigue conectado a nuestra IP (servidor principal) a través del registro A de DNS ...
+Vemos si sigue creado mi subdominio de wp.tudominio.com , y de ser así, si sigue conectado a nuestra IP (servidor principal) a través del registro A de DNS ...
 
 De no ser así, tendríamos que volver a crearlo y volver a asociarlo a nuestra IP ...
 
@@ -330,6 +330,8 @@ De no ser así, tendríamos que volver a crearlo y volver a asociarlo a nuestra 
 ![](./img/9.png)
 
 Nota: Como ya había comentado antes, en los primeros objetivos de Nginx-Tomcat-ApacheSSL, pueden aparecer imágenes como ésta, en la que se ve que estamos en la sección de los subdominios en Ionos, y he retocado la foto para que aparezca en tal lista "tudominio.com", y es que al principio de todo, cometí el error de escribir el servername de mi dominio principal con la triple w ... y en este caso en específico, al principio creé un subdominio para el portfolio, pero no era así, si no que el portfolio tiene que ir directamente en tu dominio principal ... lo que va con subdominio es el wordpress.
+
+Nota: a continuación en la siguiente imagen, verás que el subdominio es woredpress.tudominio.com ... y eso fue porque al principio del todo, empecé creando y usando así el subdominio para el wordpress durante los tres primeros objetivos, pero a partir del objetivo del NginxSSL, ya lo cambié de wordpress a wp, tanto el subdominio en Ionos como en su server block, y de ahí la explicación de que, en los tres primeros objetivos del Nginx-Tomcat-ApacheSSL, puedas ver en algunas imágenes, el subdominio o serverblock con los nombres alternados de wordpress o wp (pero ambos vienen refiriéndose a lo mismo, un subdominio y un serverblock para el wordpress).
 
 ![](./img/10.png)
 
@@ -376,7 +378,7 @@ y con esto ya estaría todo listo ! ...
 ```
 server {
   listen 80;
-  server_name wordpress.tudominio.com;
+  server_name wp.tudominio.com;
 
   root /usr/share/nginx/html/wordpress;
   index index.php index.html index.htm;
