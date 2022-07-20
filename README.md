@@ -14,6 +14,7 @@ Nota: El objetivo "0. AWS - Ionos" no constituye ningún objetivo en sí que sea
 
 Nota: Al principio, cuando asocié el dominio a la ip de la instancia, lo hice con la triple w delante del dominio (www.tudominio.com)
 Nota: Al principio, en vez de poner el portfolio en mi dominio principal, lo puse en un subdominio.
+Nota: Al principio, para el subdominio y serverblock del wordpress, ponía "wordpress" y a partir del objetivo del NginxSSL lo cambié a "wp" para ambas cosas.
 
 Nota: Es importante, sobretodo para el objetivo del Tomcat, deshabilitar el firewall interno del servidor
 
