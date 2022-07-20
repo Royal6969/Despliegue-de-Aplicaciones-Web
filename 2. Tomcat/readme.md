@@ -1,6 +1,6 @@
 # 1. Instalar y configurar Tomcat
 
-Nota: Para el primer objetivo de Tomcat, he usado el puerto 8079, pero el puerto más comunmente usado para el Tomcat es el 8080.
+Nota: Para el primer objetivo de Tomcat, he usado el puerto 8079 (porque en la red del instituto tienen bloqueado el puerto 8080), pero el puerto más comunmente usado para el Tomcat es el 8080.
 
 ## 1.1. Instalar Tomcat
 
@@ -104,6 +104,8 @@ Nota: como ya comentaba en el objetivo anterior, antes de empezar con los objeti
 
 Nota: lo de que mi dominio no está en uso, también comenté en el readme principal del repositorio, que fue porque al principio, cuando fui a enlazar mi dominio con un servername (registro dns tipo A) en Ionos, en vez de poner el caracter @ (que significa "este dominio mismo") puse la triple w... cosa que estuvo mal y no es necesaria, así que ustedes deben poner el servername del registro dns tipo A de su dominio como un caracter @... y de esa manera ya si está bien asociado el dominio y sí aparece en Ionos el mensaje de que sí está el dominio en uso.
 
+Nota: como también comentaba en el objetivo anterior del nginx, sobre el subdominio y serverblock del wordpress, es posible que en algunas imágenes de los tres primeros objetivos (nginx-tomcat-apacheSSL) aparezcan alternados los nombres de wordpress y wp para el subdominio y serverblock del wordpress.
+
 ### 1.3.4. Registro tipo A
 
 Ahora tenemos que añadirle a este subdominio el registro tipo A que apunta a mi IP
@@ -136,11 +138,13 @@ Y por último, cambiamos el propietario de la carpeta webPrueba1 y comprobamos l
 
 ## 1.4. Subir la app
 
-Una vez hecho esto solo nos queda ir al directorio webPrueba1 y poner el el Root lo que vamos a desplegar, o entrar al tomcat manager (dns:8079) y subir la aplicación en .war.
+Una vez hecho esto solo nos queda ir al directorio webPrueba1 y poner en el Root lo que vamos a desplegar, hacer un reseteo del tomcat con `systemctl restart tomcat`, e ir al navegador y poner en la URL `webprueba1.tudominio.com:8079` para comprobar que funciona perfectamente.
+
+Otra posibilidad sería entrar al tomcat manager (dns:8079) y subir la aplicación en .war.
 
 Video Extra: https://www.youtube.com/watch?v=PXozxgEMVss&ab_channel=LDTS
 
-# 2. EXTRA. ¿ Cómo hacer un proyecto de Maven en JSP en VS y exportarlo a .war?
+# 2. EXTRA. ¿Cómo hacer un proyecto de Maven en JSP en VS y exportarlo a .war?
 
 Para reforzar lo aprendido, voy a realizar los mismos pasos para desplegar un proyecto en Tomcat, pero esta vez, creando un proyecto de maven en JSP con un nuevo subdominio (webprueba2.tudominio.com)
 
@@ -156,7 +160,7 @@ https://www.oracle.com/es/java/technologies/javase/javase8-archive-downloads.htm
 
 En mi caso, como versión de java principal en mi sistema tengo el jre1.8.0_311, y he instalado el jdk1.8.0_202
 
-Curiosidad: El jdk1.8.0_202, también me instaló a su compañero el jre1.8.0_202, pero si hago en el cmd el comando java -version, lo que me sale como versión principal de java en mi sistema es el jre1.8.0_311 el cual era el que yo ya tenía en mi sistema, y que es más actual aún que el jre compañero que me ha venido del jdk1.8.0_202 … ¿cómo se explica esto, si en la variable de sistema JAVA_HOME la tengo apuntando a la carpeta del jdk1.8.0_202 ?
+Curiosidad: El jdk1.8.0_202, también me instaló a su compañero el jre1.8.0_202, pero si hago en el cmd el comando java -version, lo que me sale como versión principal de java en mi sistema es el jre1.8.0_311 el cual era el que yo ya tenía en mi sistema, y que es más actual aún que el jre compañero que me ha venido del jdk1.8.0_202 … ¿cómo se explica esto, si en la variable de sistema JAVA_HOME la tengo apuntando a la carpeta del jdk1.8.0_202?
 
 ## 2.2. Crear el proyecto en JSP
 
@@ -280,7 +284,7 @@ Para ver qué puertos están escuchando usamos el netstat:
 
 Creamos un nuevo server block para Nginx
 
-`vi etc/nginx/conf.d/tudominio.com.tomcat.conf`
+`vi etc/nginx/conf.d/webprueba2.conf`
 
 ```
 server {
@@ -333,7 +337,15 @@ server {
 }
 ```
 
-## 4.3. Cerrar puerto y resetear
+## 4.3. Creamos el subdominio
+
+Volvemos un momento a Ionos para crear el subdominio correspondiente, el de `webprueba2.tudominio.com`, y asociarlo a nuestra instancia apuntando a nuestra ip.
+
+![](./img/30.png)
+
+![](./img/31.png)
+
+## 4.4. Cerrar puerto y resetear
 
 Por último, como ya terminamos comentando antes, en AWS vamos al grupo de seguridad de nuestra instancia para cerrar el antiguo puerto del Tomcat (el 8079 o 8080, o cual sea en tu caso)
 
