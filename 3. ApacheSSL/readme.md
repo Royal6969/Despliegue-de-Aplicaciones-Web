@@ -229,8 +229,6 @@ Hacemos un `systemctl restart httpd` y en el Chrome vemos que ...
 
 ![](./img/29.png)
 
-![](./img/30.png)
-
 ![](./img/31.png)
 
 Si abrimos una nueva pestaña de incógnito en Chrome (para evitar el caché guardado), podremos ver que todo ha funcionado correctamente!!
