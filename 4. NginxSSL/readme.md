@@ -1,6 +1,6 @@
 # Nginx HTTPS
 
-Nota: En este punto, en IONOS, he habilitado que mi dominio principal (tudominio.com) apunte también a mi IP (es decir, he activado verdaderamente mi dominio), ya que antes estaba apuntando a mi ip con el dominio y la triple w delante (www.tudominio.com), pero ahora lo he modificado para que mi ip apunte solo al nombre de mi dominio, sin la triple w, es decir, tudominio.com.
+Nota: En este punto, en IONOS, he habilitado que mi dominio principal (tudominio.com) apunte también a mi IP (es decir, he activado verdaderamente mi dominio, ya que en los tres primeros objetivos del Nginx-Tomcat-ApacheSSL, tenía mi dominio empezando con la triple w, o sea, como `www.tudominio.com`, y me confundí al principio porque en realidad, cuando estamos enlazando nuestro dominio en Ionos a nuestra instancia ec2 de AWS, en el Nombre del Host, como no se puede dejar en blanco, tenemos que poner el caracter @, que significaría "este mismo dominio", y quedaría efectivamente como `tudominio.com`, y entonces Ionos ya lo entiende como que se está usando verdaderamente el dominio).
 
 ![](./img/1.png)
 
