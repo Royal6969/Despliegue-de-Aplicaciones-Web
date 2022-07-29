@@ -203,7 +203,6 @@ https://www.ssllabs.com/ssltest/
 ![](./img/24.png)
 ![](./img/25.png)
 ![](./img/26.png)
-![](./img/27.png)
 ![](./img/28.png)
 ![](./img/29.png)
 ![](./img/30.png)
