@@ -42,7 +42,7 @@
 
 # 1. Instalar y configurar Tomcat
 
-Nota: Para el primer objetivo de Tomcat, he usado el puerto 8079 (porque en la red del instituto tienen bloqueado el puerto 8080), pero el puerto más comunmente usado para el Tomcat es el 8080.
+**Nota**: Para el primer objetivo de Tomcat, he usado el puerto 8079 (porque en la red del instituto tienen bloqueado el puerto 8080), pero el puerto más comunmente usado para el Tomcat es el 8080.
 
 ## 1.1. Instalar Tomcat
 
@@ -52,7 +52,7 @@ https://techviewleo.com/install-tomcat-on-amazon-linux/
 
 Video Extra: https://www.youtube.com/watch?v=SMQjlcRmgiM
 
-Nota: Después de seguir la guía, en el momento final de probar a ver el Tomcat Manager en el Chrome, no me salía … por qué??
+**Nota**: Después de seguir la guía, en el momento final de probar a ver el Tomcat Manager en el Chrome, no me salía … por qué??
 
 Resulta que, aunque había abierto un puerto (8079) para el Tomcat a través de AWS, y cambiado el puerto también (8079) dentro del archivo de configuración del Tomcat de server.xml…
 
@@ -100,7 +100,7 @@ roles="admin-gui,manager-gui"/>
 
 `sudo systemctl restart tomcat`
 
-Nota: esto que hemos hecho no es obligatorio hacerlo ahora ya que esto sería para entrar en el gestor de Tomcat...
+**Nota**: esto que hemos hecho no es obligatorio hacerlo ahora ya que esto sería para entrar en el gestor de Tomcat...
 
 Si me diese algún error Tomcat Manager en lo que hemos hecho hasta ahora …
 
@@ -142,17 +142,17 @@ Ahora vamos a IONOS para crear un nuevo subdominio (de la misma forma que creamo
 
 ![](./img/5.png)
 
-Nota: como ya comentaba en el objetivo anterior, antes de empezar con los objetivos, es decir, preparando la asignatura tal como la dejamos el año pasado, cometí el error de crear un subdominio para el portfolio, pero eso ya lo corregí, poniendo el portfolio en mi dominio principal, de modo he retocado un poco esta imagen para que se vea bien.
+**Nota**: como ya comentaba en el objetivo anterior, antes de empezar con los objetivos, es decir, preparando la asignatura tal como la dejamos el año pasado, cometí el error de crear un subdominio para el portfolio, pero eso ya lo corregí, poniendo el portfolio en mi dominio principal, de modo he retocado un poco esta imagen para que se vea bien.
 
-Nota: lo de que mi dominio no está en uso, también comenté en el readme principal del repositorio, que fue porque al principio, cuando fui a enlazar mi dominio con un servername (registro dns tipo A) en Ionos, en vez de poner el caracter @ (que significa "este dominio mismo") puse la triple w... cosa que estuvo mal y no es necesaria, así que ustedes deben poner el servername del registro dns tipo A de su dominio como un caracter @... y de esa manera ya si está bien asociado el dominio y sí aparece en Ionos el mensaje de que sí está el dominio en uso.
+**Nota**: lo de que mi dominio no está en uso, también comenté en el readme principal del repositorio, que fue porque al principio, cuando fui a enlazar mi dominio con un servername (registro dns tipo A) en Ionos, en vez de poner el caracter @ (que significa "este dominio mismo") puse la triple w... cosa que estuvo mal y no es necesaria, así que ustedes deben poner el servername del registro dns tipo A de su dominio como un caracter @... y de esa manera ya si está bien asociado el dominio y sí aparece en Ionos el mensaje de que sí está el dominio en uso.
 
-Nota: como también comentaba en el objetivo anterior del nginx, sobre el subdominio y serverblock del wordpress, es posible que en algunas imágenes de los tres primeros objetivos (nginx-tomcat-apacheSSL) aparezcan alternados los nombres de wordpress y wp para el subdominio y serverblock del wordpress.
+**Nota**: como también comentaba en el objetivo anterior del nginx, sobre el subdominio y serverblock del wordpress, es posible que en algunas imágenes de los tres primeros objetivos (nginx-tomcat-apacheSSL) aparezcan alternados los nombres de wordpress y wp para el subdominio y serverblock del wordpress.
 
 ### 1.3.4. Registro tipo A
 
 Ahora tenemos que añadirle a este subdominio el registro tipo A que apunta a mi IP
 
-Nota: pero primero, desactivamos el Registro A que ya viene predeterminado con la creación del subdominio
+**Nota**: pero primero, desactivamos el Registro A que ya viene predeterminado con la creación del subdominio
 
 ![](./img/6.png)
 
@@ -194,7 +194,7 @@ Para reforzar lo aprendido, voy a realizar los mismos pasos para desplegar un pr
 
 Vamos a Visual Studio y en el apartado de las extensiones, buscamos la de Extension Pack for Java y la instalamos
 
-Nota: esta extensión es como la recopilación a su vez, de más extensiones de visual studio para este propósito de desarrollo, es decir, con esta extensión, también tendremos como instaladas y habilitadas otras extensiones como, Project Manager For Java o Maven For Java …
+**Nota**: esta extensión es como la recopilación a su vez, de más extensiones de visual studio para este propósito de desarrollo, es decir, con esta extensión, también tendremos como instaladas y habilitadas otras extensiones como, Project Manager For Java o Maven For Java …
 
 Importante: Es necesario instalar/tener instalado, un jdk (el jdk más actual)
 
@@ -284,7 +284,7 @@ Una vez descomprimido, eliminamos el .war y llevamos la carpeta resultante a su 
 
 `mv proyecto /usr/share/apache-tomcat-9.0.39/webPrueba1/`
 
-Nota: Antes de mover todo lo que hay dentro de /usr/share/apache-tomcat-9.0.39/webPrueba1/proyecto/ hacia /usr/share/apache-tomcat-9.0.39/webPrueba1/ROOT/ debemos eliminar en esa carpeta de ROOT/ todos los archivos los cuales sus nombres coincidan de antemano con alguno de los nuestros, de la carpeta proyecto/ (por si no se sobreescriben, que no se entorpezcan los unos con otros)
+**Nota**: Antes de mover todo lo que hay dentro de /usr/share/apache-tomcat-9.0.39/webPrueba1/proyecto/ hacia /usr/share/apache-tomcat-9.0.39/webPrueba1/ROOT/ debemos eliminar en esa carpeta de ROOT/ todos los archivos los cuales sus nombres coincidan de antemano con alguno de los nuestros, de la carpeta proyecto/ (por si no se sobreescriben, que no se entorpezcan los unos con otros)
 
 Movemos el contenido de /usr/share/apache-tomcat-9.0.39/webPrueba1/proyecto/ hacia /usr/share/apache-tomcat-9.0.39/webPrueba1/ROOT/
 
@@ -358,13 +358,13 @@ server {
 }
 ```
 
-Nota: podemos apreciar que este server block NO tiene DocumentRoot, si no un nuevo location/ que redirige al subdominio de webprueba2.tudomninio.com
+**Nota**: podemos apreciar que este server block NO tiene DocumentRoot, si no un nuevo location/ que redirige al subdominio de webprueba2.tudomninio.com
 
 Curiosidad: tanto si redirecciono con el proxy_pass al localhost(127.0.0.1) como a mi IP pública (tu ip), se redirige al Tomcat Manager, así que necesito poner en el proxy_pass el subdominio:8079 para que realmente se vaya al subdominio webprueba2.tudominio.com
 
 Curiosidad: También puedo hacer que se vea en weprueba2.tudominio.com mi proyecto de maven en JSP, y que si pongo weprueba2.tudoninio.com:8079 salga el webprueba1 … Esto se conseguiría si en el server block de webprueba2.tudominio.com.conf en la parte de arriba de servername pongo webprueba2.tudominio.com, y en la parte de abajo del proxy_pass pongo webprueba1.tudominio.com:8079
 
-Nota: Para asegurarnos de que el proxy_pass (redireccionamiento de escucha) efectivamente está funcionando, debemos cerrar (eliminar en AWS) el puerto 8079 (o el que se hubiera utilizado para el primer objetivo del tomcat)
+**Nota**: Para asegurarnos de que el proxy_pass (redireccionamiento de escucha) efectivamente está funcionando, debemos cerrar (eliminar en AWS) el puerto 8079 (o el que se hubiera utilizado para el primer objetivo del tomcat)
 
 ### Resumen server block
 
