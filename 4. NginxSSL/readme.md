@@ -1,3 +1,32 @@
+# Tabla de Contenidos
+
+<!-- TOC -->
+
+- [0. Nginx HTTPS](#nginx-https)
+- [1. Certificado SSL](#certificado-ssl)
+    - [1.1. Descarga en Ionos](#descarga-en-ionos)
+    - [1.2. Organizar los archivos](#organizar-los-archivos)
+    - [1.3. Fusión de ficheros](#fusi%C3%B3n-de-ficheros)
+    - [1.4. Nuevo server block](#nuevo-server-block)
+    - [1.5. Resetear Nginx](#resetear-nginx)
+- [2. El archivo include](#el-archivo-include)
+    - [2.1. Volvemos al server block principal](#volvemos-al-server-block-principal)
+    - [2.2. include.conf](#includeconf)
+    - [2.3. listen 443 ssl http2](#listen-443-ssl-http2)
+    - [2.4. dhparams](#dhparams)
+- [3. Definir la CAA](#definir-la-caa)
+- [4. Preloader](#preloader)
+- [5. SSL Labs](#ssl-labs)
+- [6. Examen - Teoría](#examen---teor%C3%ADa)
+    - [6.1. Archivos necesarios en el servidor](#archivos-necesarios-en-el-servidor)
+    - [6.2. HSTS](#hsts)
+    - [6.3. HTTP Headers](#http-headers)
+    - [6.4. CAA](#caa)
+    - [6.5. Preloaders](#preloaders)
+    - [6.6. OCSP Stapling](#ocsp-stapling)
+
+<!-- /TOC -->
+
 # Nginx HTTPS
 
 Nota: En este punto, en IONOS, he habilitado que mi dominio principal (tudominio.com) apunte también a mi IP (es decir, he activado verdaderamente mi dominio, ya que en los tres primeros objetivos del Nginx-Tomcat-ApacheSSL, tenía mi dominio empezando con la triple w, o sea, como `www.tudominio.com`, y me confundí al principio porque en realidad, cuando estamos enlazando nuestro dominio en Ionos a nuestra instancia ec2 de AWS, en el Nombre del Host, como no se puede dejar en blanco, tenemos que poner el caracter @, que significaría "este mismo dominio", y quedaría efectivamente como `tudominio.com`, y entonces Ionos ya lo entiende como que se está usando verdaderamente el dominio).
