@@ -29,7 +29,7 @@
 
 # Nginx HTTPS
 
-Nota: En este punto, en IONOS, he habilitado que mi dominio principal (tudominio.com) apunte también a mi IP (es decir, he activado verdaderamente mi dominio, ya que en los tres primeros objetivos del Nginx-Tomcat-ApacheSSL, tenía mi dominio empezando con la triple w, o sea, como `www.tudominio.com`, y me confundí al principio porque en realidad, cuando estamos enlazando nuestro dominio en Ionos a nuestra instancia ec2 de AWS, en el Nombre del Host, como no se puede dejar en blanco, tenemos que poner el caracter @, que significaría "este mismo dominio", y quedaría efectivamente como `tudominio.com`, y entonces Ionos ya lo entiende como que se está usando verdaderamente el dominio).
+**Nota**: En este punto, en IONOS, he habilitado que mi dominio principal (tudominio.com) apunte también a mi IP (es decir, he activado verdaderamente mi dominio, ya que en los tres primeros objetivos del Nginx-Tomcat-ApacheSSL, tenía mi dominio empezando con la triple w, o sea, como `www.tudominio.com`, y me confundí al principio porque en realidad, cuando estamos enlazando nuestro dominio en Ionos a nuestra instancia ec2 de AWS, en el Nombre del Host, como no se puede dejar en blanco, tenemos que poner el caracter @, que significaría "este mismo dominio", y quedaría efectivamente como `tudominio.com`, y entonces Ionos ya lo entiende como que se está usando verdaderamente el dominio).
 
 ![](./img/1.png)
 
@@ -112,7 +112,7 @@ server {
 
 ![](./img/11.png)
 
-Nota: Para poder completar bien este objetivo, acabaremos borrando el server{} antiguo para dejar solo el nuevo server{} del ssl.
+**Nota**: Para poder completar bien este objetivo, acabaremos borrando el server{} antiguo para dejar solo el nuevo server{} del ssl.
 
 ## 1.5. Resetear Nginx
 
@@ -194,7 +194,7 @@ Vamos a la carpeta del include, y ejecuto el siguiente comando:
 
 ![](./img/16.png)
 
-Nota: Antes de ejecutar este comando, ten en cuenta el disponer de media hora libre, porque es casi el tiempo que tardará...
+**Nota**: Antes de ejecutar este comando, ten en cuenta el disponer de media hora libre, porque es casi el tiempo que tardará...
 
 Ahora pongo bien su ruta en el archivo de include.conf
 
@@ -218,7 +218,7 @@ https://hstspreload.org/
 
 ![](./img/21.png)
 
-Nota: Después de solicitar esto por el 2X/12/2021, me lo han concedido el 04/02/2022
+**Nota**: Después de solicitar esto por el 2X/12/2021, me lo han concedido el 04/02/2022
 
 ![](./img/22.png)
 
@@ -242,7 +242,7 @@ https://www.ssllabs.com/ssltest/
 ![](./img/35.png)
 ![](./img/36.png)
 
-Nota: Pone hsts preolading not in chrome, edge y firefox, porque cuando hice esta captura, mi servidor (dominio) aún seguía estando pendiente de validarse en las listas preloaders.
+**Nota**: Pone hsts preolading not in chrome, edge y firefox, porque cuando hice esta captura, mi servidor (dominio) aún seguía estando pendiente de validarse en las listas preloaders.
 
 ![](./img/37.png)
 
