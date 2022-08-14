@@ -1,3 +1,34 @@
+# Tabla de Contenidos
+
+<!-- TOC -->
+
+- [1. AWS](#aws)
+    - [1.1. Crea una cuenta](#crea-una-cuenta)
+    - [1.2. Crear la instancia](#crear-la-instancia)
+    - [1.3. IP elástica](#ip-el%C3%A1stica)
+    - [1.4. PuTTY](#putty)
+    - [1.5. SSH](#ssh)
+    - [1.6. Instalar Apache](#instalar-apache)
+    - [1.7. Instalar MySQL](#instalar-mysql)
+        - [Resumen Comandos Básicos Iniciales de MySQL:](#resumen-comandos-b%C3%A1sicos-iniciales-de-mysql)
+    - [1.8. Otras instalaciones extras](#otras-instalaciones-extras)
+    - [1.9. systemctl stop/disable firewall-cmd](#systemctl-stopdisable-firewall-cmd)
+- [2. Ionos](#ionos)
+    - [2.1. Dominio](#dominio)
+    - [2.2. Registro DNS](#registro-dns)
+    - [2.3. Subdominio](#subdominio)
+- [3. Instalar y configurar Wordpress](#instalar-y-configurar-wordpress)
+- [4. Apache](#apache)
+    - [4.1. Archivo vhost](#archivo-vhost)
+    - [4.2. Filezilla](#filezilla)
+    - [4.3. Reseteo y despliegue](#reseteo-y-despliegue)
+- [5. Posibles errores](#posibles-errores)
+    - [5.1. Error httpd](#error-httpd)
+    - [5.2. Error wordpress css](#error-wordpress-css)
+    - [5.3. El super error de wordpress](#el-super-error-de-wordpress)
+
+<!-- /TOC -->
+
 # 1. AWS
 
 Vamos a a la web de AWS (Amazon Web Services): https://aws.amazon.com/es/
@@ -25,7 +56,7 @@ Preguntas frecuentes sobre la capa gratuita: https://aws.amazon.com/es/free/faqs
 Para crear la instancia de Amazon Linux 2 seguiremos los pasos de este video:
 https://www.youtube.com/watch?v=A4f-EMAuynU&ab_channel=andresibarra
 
-Nota: Guárdate bien en algún lugar de tu ordenador (o en Google Drive si tienes bien protegida tu cuenta de Google) la private key (la clave privada RSA que descargas... el archivo de seguridad de conexión).
+**Nota**: Guárdate bien en algún lugar de tu ordenador (o en Google Drive si tienes bien protegida tu cuenta de Google) la private key (la clave privada RSA que descargas... el archivo de seguridad de conexión).
 
 ## 1.3. IP elástica
 
@@ -33,7 +64,7 @@ Debemos asociar nuestra instancia a una IP elástica. Pero, ¿qué es una IP el�
 
 Para asociar una IP elástica a una instancia: https://www.youtube.com/watch?v=jzCyxgydM8E
 
-## 1.5. PuTTY
+## 1.4. PuTTY
 
 PuTTY es un cliente SSH, Telnet, rlogin, y TCP raw con licencia libre. Para descargar el instalador de Putty: https://www.putty.org/
 
@@ -41,7 +72,7 @@ Sobre como convertir la clave privade (RSA) .pem en .ppk, puedes volver a consul
 
 Putty permite muchísimas opciones de configuración y personalización. Por ejemplo, tanto para cambiar los colores de la terminar del Putty, como para guardar un inicio de sesión, recomiendo ver el siguiente video: https://www.youtube.com/watch?v=eq4vH6FuGS0&ab_channel=EstebanCosano
 
-Nota: Lo primero que debemos hacer al entrar en el servidor por primera vez (y alguna otra vez cada par de meses por lo menos) es ejecutar el comando `yum update` para actualizar todos los programas y demás elementos posibles del servidor.
+**Nota**: Lo primero que debemos hacer al entrar en el servidor por primera vez (y alguna otra vez cada par de meses por lo menos) es ejecutar el comando `yum update` para actualizar todos los programas y demás elementos posibles del servidor.
 
 ## 1.5. SSH
 
@@ -53,13 +84,13 @@ El archivo que alberga las opciones de configuración del SSH lo podemos encontr
 
 Realmente no tendríamos que tocar nada de este archivo, a no ser que se quisiera una configuración más específica que defina el método de login y tal... 
 
-Nota: Es mejor mantener el "PasswordAuthentication no" porque realmente es emjor la entrada por la clave privada RSA que descagamos al crear la instancia... y de ahí el otro parámetro de la configuración que se llama "AuthorizedKeysFile"...
+**Nota**: Es mejor mantener el "PasswordAuthentication no" porque realmente es emjor la entrada por la clave privada RSA que descagamos al crear la instancia... y de ahí el otro parámetro de la configuración que se llama "AuthorizedKeysFile"...
 
-Nota: en esta configuración también podemos cambiar el puerto de entrada predeterminado (22) a otro personalizado, y en el grupo de seguridad de AWS cambiar el puerto 22 del ssh al nuevo que hayamos definido en el archivo de configuración.
+**Nota**: en esta configuración también podemos cambiar el puerto de entrada predeterminado (22) a otro personalizado, y en el grupo de seguridad de AWS cambiar el puerto 22 del ssh al nuevo que hayamos definido en el archivo de configuración.
 
-Nota: Si manipulando este archivo, y quizás a causa de la inexperiencia o cualquier error, se produjera un "lost in space", lo primero es mantener la calma. AWS cuenta con una consola de recuperación (cloud shell) para nuestras instancias: https://www.youtube.com/watch?v=BfWfNLGNEe8
+**Nota**: Si manipulando este archivo, y quizás a causa de la inexperiencia o cualquier error, se produjera un "lost in space", lo primero es mantener la calma. AWS cuenta con una consola de recuperación (cloud shell) para nuestras instancias: https://www.youtube.com/watch?v=BfWfNLGNEe8
 
-Nota: si estuvieras interesado en una copia de seguridad de tu instancia ec2 (genera cargos extra en tu método de pago), echa un vistazo a esta documentación de AWS sobre los backups: https://aws.amazon.com/es/backup/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc
+**Nota**: si estuvieras interesado en una copia de seguridad de tu instancia ec2 (genera cargos extra en tu método de pago), echa un vistazo a esta documentación de AWS sobre los backups: https://aws.amazon.com/es/backup/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc
 
 ## 1.6. Instalar Apache
 
@@ -67,7 +98,7 @@ Para instalar Apache, bastará con ejecutar el comando `yum install httpd -y`
 
 Video Ejemplo: https://www.youtube.com/watch?v=ulIrn6O8v_g&ab_channel=TechnoConfig
 
-Nota: Si de primeras, no conseguimos ver la página de prueba del test de Apache en nuestro navegador, recordar consultar el grupo de seguridad de AWS para comprobar el respectivo puerto de Apache...
+**Nota**: Si de primeras, no conseguimos ver la página de prueba del test de Apache en nuestro navegador, recordar consultar el grupo de seguridad de AWS para comprobar el respectivo puerto de Apache...
 
 ## 1.7. Instalar MySQL
 
@@ -103,7 +134,7 @@ Para instalar Telnet:
 - `systemctl enable telnet.socket`
 - `sudo yum install policycoreutils-python`
 
-Nota: Para instalar PHP, esperar a entrar en la guía del 1º objetivo (Nginx y PHP)
+**Nota**: Para instalar PHP, esperar a entrar en la guía del 1º objetivo (Nginx y PHP)
 
 ## 1.9. systemctl stop/disable firewall-cmd
 
@@ -117,9 +148,9 @@ Crea una nueva cuenta (regístrate) en Ionos (el antiguo One-and-One).
 
 Ahora tienes que comprar un dominio (tudominio.com) por 1 euro, y te regalan con la compra del dominio el SSL también.
 
-Nota: el dominio lo compramos por 1 euro, pero es el precio sólo del primer año, a partir del segundo año se eleva a 10 euros, equiparándose así al resto de plataformas proveedoras de dominios)
+**Nota**: el dominio lo compramos por 1 euro, pero es el precio sólo del primer año, a partir del segundo año se eleva a 10 euros, equiparándose así al resto de plataformas proveedoras de dominios)
 
-Nota: más adelante estudiaremos el concepto de SSL y veremos qué hacer con ello.
+**Nota**: más adelante estudiaremos el concepto de SSL y veremos qué hacer con ello.
 
 ## 2.2. Registro DNS
 
@@ -129,7 +160,7 @@ Para ello, puedes hacerlo desde el botón de "engranaje" de las opciones de tu d
 
 Cuando nos salga el casillero para escribir el nombre del dominio, pondremos el caracter @ (porque el caracter @ significa "a este mismo", que en este caso nos referimos a "este mismo dominio"), y en el otro casillero para decirle a dónde debe apuntar, pondremos la ip de nuestra instancia (la ip pública, claro)
 
-Nota: recuerda que siempre puedes consultar los datos y demás información sobre tu instancia en AWS en la sección de EC2 --> Instancias
+**Nota**: recuerda que siempre puedes consultar los datos y demás información sobre tu instancia en AWS en la sección de EC2 --> Instancias
 
 ![](./img/1.png)
 
@@ -137,13 +168,13 @@ Nota: recuerda que siempre puedes consultar los datos y demás información sobr
 
 ![](./img/3.png)
 
-Nota: vuelvo a recordar que las censuras de las imágenes corresponden a mi dominio y a mi ip.
+**Nota**: vuelvo a recordar que las censuras de las imágenes corresponden a mi dominio y a mi ip.
 
 Si ahora vamos a nuestro servidor y ejecutamos el clásico comando de `nslookup tudominio.com`, podremos comprobar que nuestro dominio ya está enlazado a nuestra instancia (ip) correctamente.
 
-Nota: cuando estamos en la pantalla de creación del registro dns tipo A para asociar nuestro dominio principal a la ip de nuestra instancia, como nombre del host, no hay que escribir otra vez el nombre de nuestro dominio, si no que ponemos el caracter "@", que significa "este mismo dominio".
+**Nota**: cuando estamos en la pantalla de creación del registro dns tipo A para asociar nuestro dominio principal a la ip de nuestra instancia, como nombre del host, no hay que escribir otra vez el nombre de nuestro dominio, si no que ponemos el caracter "@", que significa "este mismo dominio".
 
-Nota: quisiera recordar, que al principio me confundí en esta parte, y cuando creé por primera vez el registro dns de mi dominio, lo puse con la tripe w, es decir, www.tudominio.com, y esto no debe ser así, es decir, tienes que poner directamente tu dominio, sin las w (tudominio.com). He visto conveniente recordarte este detalle confuso que tuve para que tú no caigas en lo mismo, y también porque quizás en algunas imagenes de los primeros objetivos (nginx, tomcat y apacheSSL) aparecerá mi dominio con la triple w, pero ya en el objetivo del nginxSSL, cambié bien el servername a mi dominio sólo, sin la triple w... De hecho, cuando tenía el www. delante de mi dominio, Ionos me decía que aún no estaba usando realmente mi dominio.
+**Nota**: quisiera recordar, que al principio me confundí en esta parte, y cuando creé por primera vez el registro dns de mi dominio, lo puse con la tripe w, es decir, www.tudominio.com, y esto no debe ser así, es decir, tienes que poner directamente tu dominio, sin las w (tudominio.com). He visto conveniente recordarte este detalle confuso que tuve para que tú no caigas en lo mismo, y también porque quizás en algunas imagenes de los primeros objetivos (nginx, tomcat y apacheSSL) aparecerá mi dominio con la triple w, pero ya en el objetivo del nginxSSL, cambié bien el servername a mi dominio sólo, sin la triple w... De hecho, cuando tenía el www. delante de mi dominio, Ionos me decía que aún no estaba usando realmente mi dominio.
 
 ## 2.3. Subdominio
 
@@ -155,7 +186,7 @@ O bien a través del siguiente camino:
 
 ![](./img/5.png)
 
-Nota: en Ionos, si en el home de la sección de dominios, en el botón del "engranaje", pulsamos en "administrar dominios", también llegaremos a un panel donde se recogen todos lo ssubdominios y con las demás opciones de crear uno nuevo, etc.
+**Nota**: en Ionos, si en el home de la sección de dominios, en el botón del "engranaje", pulsamos en "administrar dominios", también llegaremos a un panel donde se recogen todos lo ssubdominios y con las demás opciones de crear uno nuevo, etc.
 
 Con ambos ambas opciones, llegaremos al mismo sitio, donde tendremos que poner el nombre del subdominio, y añadirle el registro dns de tipo A para indicarle la ip hacia donde apunta.
 
@@ -163,7 +194,7 @@ Con ambos ambas opciones, llegaremos al mismo sitio, donde tendremos que poner e
 
 ![](./img/7.png)
 
-Nota: cuando creamos un nuevo subdominio, se crea automáticamente un registro dns tipo A, el cual debemos modificar, o bien eliminarlo y crearlo bien de nuevo nosotros mismos (si intentas añadir nuevos registros dns tipo A sin
+**Nota**: cuando creamos un nuevo subdominio, se crea automáticamente un registro dns tipo A, el cual debemos modificar, o bien eliminarlo y crearlo bien de nuevo nosotros mismos (si intentas añadir nuevos registros dns tipo A sin
 eliminar los defaults que ya se habían generado solos, te saltará un aviso tipo warning y de confirmación).
 
 Llegados a este punto y recapitulando, ya tenemos un dominio listo y asociado a nuestra instancia, el cual lo utilizaremos para desplegar nuestro portfolio; y por otro lado, también tenemos un subdominio listo para desplegar nuestro wordpress.
@@ -174,15 +205,15 @@ Para instalar y configurar Wordpress, seguir la siguiente guía provista directa
 
 https://docs.aws.amazon.com/es_es/AWSEC2/latest/UserGuide/hosting-wordpress.html
 
-Nota: cuando descargamos el comprimido del wordpress en el primer paso, recuerda que para desplegarlo posteriormente en Apache, debemos descomprimir este archivo (y colocar los archivos resultantes) en `/var/www/html/wordpress/`.
+**Nota**: cuando descargamos el comprimido del wordpress en el primer paso, recuerda que para desplegarlo posteriormente en Apache, debemos descomprimir este archivo (y colocar los archivos resultantes) en `/var/www/html/wordpress/`.
 
-Nota: en ciertas ocasiones, algunos usuarios cuentan que, cuando llegaban a la parte de poner en chrome la IP/wordpress para empezar su configuración, les daba un mensaje de incompatibilidad de versiones que decía: "Your PHP installation appears to be missing the MySQL extension which is required by WordPress"
+**Nota**: en ciertas ocasiones, algunos usuarios cuentan que, cuando llegaban a la parte de poner en chrome la IP/wordpress para empezar su configuración, les daba un mensaje de incompatibilidad de versiones que decía: "Your PHP installation appears to be missing the MySQL extension which is required by WordPress"
 
 Este error se resuelve con tan sólo instalar MySQLi: `yum install php-mysqli`, y ahora ya sí que aparece el menú en chrome (IP/wordpress) para empezar a configurarlo.
 
-Nota: Recuerda que la instalación final, puede llevarse a cabo tanto desde dentro del servidor en los archivos de configuración de wordpress (tal como explica la guía oficial de AWS), o en el navegador a través de nuestro dominio asociado, http://tudominio.com/wordpress/wp-admin/setup-config.php
+**Nota**: Recuerda que la instalación final, puede llevarse a cabo tanto desde dentro del servidor en los archivos de configuración de wordpress (tal como explica la guía oficial de AWS), o en el navegador a través de nuestro dominio asociado, http://tudominio.com/wordpress/wp-admin/setup-config.php
 
-Nota: (opcionalmente) Para instalar el WP-CLI: https://wp-cli.org/es/
+**Nota**: (opcionalmente) Para instalar el WP-CLI: https://wp-cli.org/es/
 
 # 4. Apache
 
@@ -268,7 +299,7 @@ Y es que resulta, que para instalar bien wordpress, hay que instalarlo desde el 
 
 Conclusión: para instalar bien wordpress debemos, primero crear el subdominio, y luego instalarlo en él a través del navegador.
 
-Nota: antes de ejecutar la instalación a través del navegador, dejar previamente creado y configurado el archivo vhosts, y que el Directory de
+**Nota**: antes de ejecutar la instalación a través del navegador, dejar previamente creado y configurado el archivo vhosts, y que el Directory de
 wordpress apunte y asocie el subdominio (creado previamente con Ionos)
 con wordpress.
 
