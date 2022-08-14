@@ -1,3 +1,40 @@
+# Tabla de Contenidos
+
+<!-- TOC -->
+
+- [0. HTTPS con Apache y OpenSSL](#https-con-apache-y-openssl)
+- [1. Autoridad Certificadora](#autoridad-certificadora)
+        - [Tutorial: configure SSl/TLS en Amazon Linux 2](#tutorial-configure-ssltls-en-amazon-linux-2)
+        - [Cómo crear un certificado SSL autofirmado para Apache en Ubuntu 20.04](#c%C3%B3mo-crear-un-certificado-ssl-autofirmado-para-apache-en-ubuntu-2004)
+        - [Crear autoridad certificadora CA y certificados autofirmados en Linux](#crear-autoridad-certificadora-ca-y-certificados-autofirmados-en-linux)
+        - [Habilitar SSL en la instancia de Apache en EC2](#habilitar-ssl-en-la-instancia-de-apache-en-ec2)
+    - [1.1. Habilitar Apache](#habilitar-apache)
+    - [1.2. Grupo de seguridad](#grupo-de-seguridad)
+    - [1.3. Crear la CA](#crear-la-ca)
+- [2. Certificado de Dominio](#certificado-de-dominio)
+    - [2.1. Solicitud de certificado](#solicitud-de-certificado)
+- [3. Configuración de Apache](#configuraci%C3%B3n-de-apache)
+    - [3.1. Archivos generados](#archivos-generados)
+    - [3.2. httpd.conf](#httpdconf)
+    - [3.3. VirtualHost](#virtualhost)
+    - [3.4. Resetear Apache](#resetear-apache)
+- [4. Comportamiento de los Navegadores](#comportamiento-de-los-navegadores)
+    - [4.1. Firefox](#firefox)
+    - [4.2. Privacidad/Seguridad --> Certificados](#privacidadseguridad----certificados)
+- [5. Crear certificados con SAN Subject Alternative Name](#crear-certificados-con-san-subject-alternative-name)
+    - [5.1. Archivos SANready y x509](#archivos-sanready-y-x509)
+    - [5.2. Clave privada](#clave-privada)
+    - [5.3. Autoridad Certificadora](#autoridad-certificadora)
+    - [5.4. Firmamos la solicitud](#firmamos-la-solicitud)
+    - [5.5. Propiedades de la solicitud](#propiedades-de-la-solicitud)
+- [6. Entrega del objetivo de Apache SSL](#entrega-del-objetivo-de-apache-ssl)
+    - [6.1. Resumen del Vhost https indicando](#resumen-del-vhost-https-indicando)
+    - [6.2. Firefox](#firefox)
+        - [ACLARACIÓN FINAL 1:](#aclaraci%C3%B3n-final-1)
+        - [ACLARACIÓN FINAL 2:](#aclaraci%C3%B3n-final-2)
+
+<!-- /TOC -->
+
 # HTTPS con Apache y OpenSSL
 
 # 1. Autoridad Certificadora
