@@ -111,7 +111,7 @@ Por eso mismo, descomentamos la siguiente línea, y nos aseguramos que en la lis
 
 ![](./img/4.png)
 
-Nota: Esto da permisos a los procesos nginx para conectar con el socket de php-fpm.
+**Nota**: Esto da permisos a los procesos nginx para conectar con el socket de php-fpm.
 
 Ojo porque un espacio después de la coma puede hacer que falle.
 
@@ -220,7 +220,7 @@ Para el server block, he seguido esta guía: https://awswithatiq.com/setup-php-n
 
 Esta parte trata de volver a conseguir sacar por el navegador, el portfolio a través de mi dominio principal, y el wordpress a través de un subdominio
 
-Nota: Antes de nada, recordar que,
+**Nota**: Antes de nada, recordar que,
 
 - los server blocks están en: /etc/nginx/conf.d/
 - el DirectoryRoot de Nginx está en: /usr/share/nginx/html/
@@ -264,7 +264,7 @@ y vamos al navegador y si ponemos tudominio.com ...
 
 FUNCIONA !! ya sale el portfolio a través de Nginx !!
 
-Nota: ATENCIÓN! previamente a esto, configuramos el server block de tudominio.com.conf para que enrutara hacia el DirectoryRoot de Nginx y allí pudiese acceder precísamente al archivo de index.php, el cual albergaba la función de phpinfo(), la cual si en el navegador poníamos tudominio.com/index.php nos llevaba a toda la información de nuestro PHP ... pero ahora NO, porque en ese mismo server block, ahora hemos enrutado hacia dentro del DirectoryRoot dentro de portfolio ...
+**Nota**: ATENCIÓN! previamente a esto, configuramos el server block de tudominio.com.conf para que enrutara hacia el DirectoryRoot de Nginx y allí pudiese acceder precísamente al archivo de index.php, el cual albergaba la función de phpinfo(), la cual si en el navegador poníamos tudominio.com/index.php nos llevaba a toda la información de nuestro PHP ... pero ahora NO, porque en ese mismo server block, ahora hemos enrutado hacia dentro del DirectoryRoot dentro de portfolio ...
 
 Para que vuelva a funcionar y vuelva a poder verse la información de PHP poniendo en el navegador la misma dirección que antes... debo mover el archivo de index.php del DirectoryRoot de Nginx hacia el directorio del portfolio, cambiándole el nombre a info.php ...
 
@@ -308,7 +308,7 @@ https://docs.aws.amazon.com/es_es/AWSEC2/latest/UserGuide/hosting-wordpress.html
 
 `sudo chown root:nginx -R wordpress` 
 
-Nota: al igual que ya hicimos en su momento con el portfolio, es importante cambiar el propietario porque cuando descomprimes el archivo, los propietarios por defectos son ”nobody”, y hay que ponerlo root:nginx y vemos que todos los archivos se ponen en verde... esto no lo hice al principio y cuando fui a instalar wordpress en el subdominio, no me salía wordpress, si no que siempre me redirigía al servidor principal (portfolio)
+**Nota**: al igual que ya hicimos en su momento con el portfolio, es importante cambiar el propietario porque cuando descomprimes el archivo, los propietarios por defectos son ”nobody”, y hay que ponerlo root:nginx y vemos que todos los archivos se ponen en verde... esto no lo hice al principio y cuando fui a instalar wordpress en el subdominio, no me salía wordpress, si no que siempre me redirigía al servidor principal (portfolio)
 
 ![](./img/6.png)
 
@@ -335,7 +335,7 @@ Vamos a volver a crear un usuario y una BBDD para el nuevo wordpress de Nginx
 
 `sudo vi etc/nginx/conf.d/wp.conf`
 
-Nota: Como ya tenemos el server block de mi servidor principal, tan sólo habría que cambiarle un par de palabras... 
+**Nota**: Como ya tenemos el server block de mi servidor principal, tan sólo habría que cambiarle un par de palabras... 
 
 Para ello vamos a copiar éste y a cambiarle el nombre a wp.conf
 
@@ -364,9 +364,9 @@ De no ser así, tendríamos que volver a crearlo y volver a asociarlo a nuestra 
 
 ![](./img/9.png)
 
-Nota: Como ya había comentado antes, en los primeros objetivos de Nginx-Tomcat-ApacheSSL, pueden aparecer imágenes como ésta, en la que se ve que estamos en la sección de los subdominios en Ionos, y he retocado la foto para que aparezca en tal lista "tudominio.com", y es que al principio de todo, cometí el error de escribir el servername de mi dominio principal con la triple w ... y en este caso en específico, al principio creé un subdominio para el portfolio, pero no era así, si no que el portfolio tiene que ir directamente en tu dominio principal ... lo que va con subdominio es el wordpress.
+**Nota**: Como ya había comentado antes, en los primeros objetivos de Nginx-Tomcat-ApacheSSL, pueden aparecer imágenes como ésta, en la que se ve que estamos en la sección de los subdominios en Ionos, y he retocado la foto para que aparezca en tal lista "tudominio.com", y es que al principio de todo, cometí el error de escribir el servername de mi dominio principal con la triple w ... y en este caso en específico, al principio creé un subdominio para el portfolio, pero no era así, si no que el portfolio tiene que ir directamente en tu dominio principal ... lo que va con subdominio es el wordpress.
 
-Nota: a continuación en la siguiente imagen, verás que el subdominio es woredpress.tudominio.com ... y eso fue porque al principio del todo, empecé creando y usando así el subdominio para el wordpress durante los tres primeros objetivos, pero a partir del objetivo del NginxSSL, ya lo cambié de wordpress a wp, tanto el subdominio en Ionos como en su server block, y de ahí la explicación de que, en los tres primeros objetivos del Nginx-Tomcat-ApacheSSL, puedas ver en algunas imágenes, el subdominio o serverblock con los nombres alternados de wordpress o wp (pero ambos vienen refiriéndose a lo mismo, un subdominio y un serverblock para el wordpress).
+**Nota**: a continuación en la siguiente imagen, verás que el subdominio es woredpress.tudominio.com ... y eso fue porque al principio del todo, empecé creando y usando así el subdominio para el wordpress durante los tres primeros objetivos, pero a partir del objetivo del NginxSSL, ya lo cambié de wordpress a wp, tanto el subdominio en Ionos como en su server block, y de ahí la explicación de que, en los tres primeros objetivos del Nginx-Tomcat-ApacheSSL, puedas ver en algunas imágenes, el subdominio o serverblock con los nombres alternados de wordpress o wp (pero ambos vienen refiriéndose a lo mismo, un subdominio y un serverblock para el wordpress).
 
 ![](./img/10.png)
 
@@ -380,7 +380,7 @@ Nota: a continuación en la siguiente imagen, verás que el subdominio es woredp
 
 ![](./img/15.png)
 
-Nota: cuando estemos creando un registro dns tipo A para asociar un subdominio a nuestra instancia ec2 (ip), no poner nunca en el nombre del host, el prefijo de la triple w, es decir, no poner nunca delante el www. si no poner directamente el nombre del subdominio (en este caso, wordpress)
+**Nota**: cuando estemos creando un registro dns tipo A para asociar un subdominio a nuestra instancia ec2 (ip), no poner nunca en el nombre del host, el prefijo de la triple w, es decir, no poner nunca delante el www. si no poner directamente el nombre del subdominio (en este caso, wordpress)
 
 - Hacemos un `systemctl restart nginx`
 
