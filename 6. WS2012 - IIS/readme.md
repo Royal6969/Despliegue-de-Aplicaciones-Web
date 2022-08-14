@@ -22,9 +22,9 @@
 
 Lo primero de todo será dirigirnos a AWS para crear una instancia ec2 de un Windows Server 2012.
 
-Nota: Aunque la creación de esta instancia está dentro de la capa gratuita de AWS, es posible que algunos factores (como superar el límite máximo de horas gratis entre las instancias) puedan acabar suponiendo un coste adicional en nuestro medio de pago en AWS, de ahí la importancia de mantener apagada esta instancia cuando no estemos haciendo este objetivo y sólo encenderla cuando nos pongamos con ello o cuando tengamos que presentarle el resultado final al profesor.
+**Nota**: Aunque la creación de esta instancia está dentro de la capa gratuita de AWS, es posible que algunos factores (como superar el límite máximo de horas gratis entre las instancias) puedan acabar suponiendo un coste adicional en nuestro medio de pago en AWS, de ahí la importancia de mantener apagada esta instancia cuando no estemos haciendo este objetivo y sólo encenderla cuando nos pongamos con ello o cuando tengamos que presentarle el resultado final al profesor.
 
-Nota: En la siguiente imagen aparece marcada la instancia de Windows Server 2022, pero la que yo usé y la que tú tienes que seleccionar, es la versión de 2012 (que es la que marca el profesor en su programa)... lo que te quiero decir, es que puedes crear la instancia con la versión de 2022 si quieres, ya que todas son prácticamente iguales sólo que con algunas ciertas mejoras, pero si te surge algún error o inconveniente que yo no haya experimentado en la versión de 2012 o que yo no haya recogido en esta guía, tendrás que arreglártelas por tí mismo...
+**Nota**: En la siguiente imagen aparece marcada la instancia de Windows Server 2022, pero la que yo usé y la que tú tienes que seleccionar, es la versión de 2012 (que es la que marca el profesor en su programa)... lo que te quiero decir, es que puedes crear la instancia con la versión de 2022 si quieres, ya que todas son prácticamente iguales sólo que con algunas ciertas mejoras, pero si te surge algún error o inconveniente que yo no haya experimentado en la versión de 2012 o que yo no haya recogido en esta guía, tendrás que arreglártelas por tí mismo...
 
 ![](./img/1.png)
 
@@ -104,7 +104,7 @@ Vamos a conocer un poco más de cerca el dashboard del IIS para familiarizarnos 
 
 ![](./img/22.png)
 
-Nota: Para haber especificado ese Phisical Path, obviamente antes hemos tenido que subir el proyecto a nuestro WS2012 y guardarlo, por ejemplo, en el disco C:\ , pero, ¿y cómo subimos un proyecto al WS2012? ... en una nota de un poco más abajo te explico el truco...
+**Nota**: Para haber especificado ese Phisical Path, obviamente antes hemos tenido que subir el proyecto a nuestro WS2012 y guardarlo, por ejemplo, en el disco C:\ , pero, ¿y cómo subimos un proyecto al WS2012? ... en una nota de un poco más abajo te explico el truco...
 
 ![](./img/23.png)
 
@@ -114,7 +114,7 @@ Es en este momento cuando aprendemos el “MotoTruco”. Resulta que el ClipBoar
 
 Del mismo modo podemos instalar Google Chrome en WS2012. En nuestro ordenador, descargamos el ejecutable (instalador) de Chrome, lo copiamos, y nos vamos al WS2012 para pegarlo en el escritorio, y allí lo ejecutamos para instalarlo... y funciona perfectamente!
 
-Nota: Para no tener que instalar los 5 Gb del plugin de ASP.net en nuestro ordenador para VS, te dejo en un enlace de Drive, para que descargues directamente el proyecto que he usado para la prueba de toda esta explicación.
+**Nota**: Para no tener que instalar los 5 Gb del plugin de ASP.net en nuestro ordenador para VS, te dejo en un enlace de Drive, para que descargues directamente el proyecto que he usado para la prueba de toda esta explicación.
 
 https://drive.google.com/drive/folders/1KHRxOgACAQk6mMtMP3IBgOCLMrLcWwG0?usp=sharing
 
@@ -126,7 +126,7 @@ Un detalle muy importante que debemos tener en cuenta es, cambiar los permisos d
 
 ![](./img/25.png)
 
-Nota: A cada paso que hagamos, y por consiguiente, después de cada cambio que realicemos, debemos reiniciar el IIS, para asegurarnos que los cambios vayan surtiendo efecto.
+**Nota**: A cada paso que hagamos, y por consiguiente, después de cada cambio que realicemos, debemos reiniciar el IIS, para asegurarnos que los cambios vayan surtiendo efecto.
 
 ![](./img/26.png)
 
@@ -134,19 +134,19 @@ Nota: A cada paso que hagamos, y por consiguiente, después de cada cambio que r
 
 El siguiente paso será definir el DefaultDocument de nuestro proyecto (el archivo.dll).
 
-Nota: ojo, lo hacemos desde las opciones del panel de app2.
+**Nota**: ojo, lo hacemos desde las opciones del panel de app2.
 
 ![](./img/27.png)
 
 ![](./img/28.png)
 
-Nota: es importante que tengamos en cuenta que, después de haber creado el proyecto en el IIS, siempre podremos modificar la configuración que le dimos inicialmente, a través del botón de la navegación derecha, “BasicSettings”, el cual podremos encontrar desde la carpeta Sites del IIS. (en este ejemplo, te demuestro que puedo cambiar los campos, como el Path, por ejemplo).
+**Nota**: es importante que tengamos en cuenta que, después de haber creado el proyecto en el IIS, siempre podremos modificar la configuración que le dimos inicialmente, a través del botón de la navegación derecha, “BasicSettings”, el cual podremos encontrar desde la carpeta Sites del IIS. (en este ejemplo, te demuestro que puedo cambiar los campos, como el Path, por ejemplo).
 
 ![](./img/29.png)
 
 ![](./img/30.png)
 
-Nota: Empezamos haciendo algunas comprobaciones sobre si conseguimos reproducir (desplegar) nuestro proyecto en el Chrome del WS2012, y para ello, en el Firewall de AWS (en el grupo de seguridad del WS2012), le abrimos un puerto tipo TCP y elegí el 8070 (especificándolo sólo para la IP del WS).
+**Nota**: Empezamos haciendo algunas comprobaciones sobre si conseguimos reproducir (desplegar) nuestro proyecto en el Chrome del WS2012, y para ello, en el Firewall de AWS (en el grupo de seguridad del WS2012), le abrimos un puerto tipo TCP y elegí el 8070 (especificándolo sólo para la IP del WS).
 
 Una vez lo hayamos conseguido de esta forma, finalmente acabaremos cerrando el puerto 8070, para hacerle un proxy_pass para que el IIS funcione a través del Nginx de nuestro servidor Linux, y de esta forma, hacerlo más seguro.
 
@@ -168,7 +168,7 @@ Ahora ya tan sólo tenemos que hacerle un Restart al IIS, y si nos vamos al Chro
 
 ![](./img/34.png)
 
-Nota: Aparte de que podemos manejar el IIS en general con Start, Stop, y Restart, debemos saber que estas opciones también están disponibles para cada proyecto, con lo cual podemos activar o desactivar cualquier proyecto en cualquier momento de manera fácil y rápida cuando lo necesitemos.
+**Nota**: Aparte de que podemos manejar el IIS en general con Start, Stop, y Restart, debemos saber que estas opciones también están disponibles para cada proyecto, con lo cual podemos activar o desactivar cualquier proyecto en cualquier momento de manera fácil y rápida cuando lo necesitemos.
 
 ## 2.9. Nuevo server block y subdominio
 
@@ -199,13 +199,13 @@ server {
 
 ![](./img/36.png)
 
-Nota: No olvidarnos de reiniciar Nginx después de crear el nuevo server block.
+**Nota**: No olvidarnos de reiniciar Nginx después de crear el nuevo server block.
 
 ## 2.10. Cerrar el puerto del WS
 
 Por último, la "prueba de fuego" de siempre, cerrar el puerto 8070 del Firewall del WS2012 (a través del grupo de seguridad de la instancia ec2 del WS2012 en AWS). 
 
-Nota: Además, debemos cambiar el origen del puerto 80 hacia la IP de nuestra instancia ec2 Linux.
+**Nota**: Además, debemos cambiar el origen del puerto 80 hacia la IP de nuestra instancia ec2 Linux.
 
 El grupo de seguridad de nuestra instancia WS2012 debe quedar así:
 
