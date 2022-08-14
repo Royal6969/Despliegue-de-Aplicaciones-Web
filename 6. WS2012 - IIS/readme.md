@@ -1,3 +1,23 @@
+# Tabla de Contenidos
+
+<!-- TOC -->
+
+- [1. Crear la instancia](#crear-la-instancia)
+- [2. Desplegar un proyecto con IIS](#desplegar-un-proyecto-con-iis)
+    - [2.1. Instalación del IIS](#instalaci%C3%B3n-del-iis)
+    - [2.2. Proyecto de ASP.net](#proyecto-de-aspnet)
+    - [2.3. Entramos en el IIS](#entramos-en-el-iis)
+    - [2.4. El dashboard del IIS](#el-dashboard-del-iis)
+    - [2.5. Permisos](#permisos)
+    - [2.6. Default Document](#default-document)
+    - [2.7. ASP.NET Core Runtime](#aspnet-core-runtime)
+    - [2.8. Comprobación local](#comprobaci%C3%B3n-local)
+    - [2.9. Nuevo server block y subdominio](#nuevo-server-block-y-subdominio)
+    - [2.10. Cerrar el puerto del WS](#cerrar-el-puerto-del-ws)
+    - [2.11. Comprobación final](#comprobaci%C3%B3n-final)
+
+<!-- /TOC -->
+
 # 1. Crear la instancia
 
 Lo primero de todo será dirigirnos a AWS para crear una instancia ec2 de un Windows Server 2012.
@@ -46,7 +66,7 @@ Internet Information Server (o IIS por sus siglas en inglés) es un servidor web
 
 Para instalar el IIS he seguido los pasos de esta guía: https://enterprise.arcgis.com/es/web-adaptor/latest/install/iis/enable-iis-2012-components-server.htm
 
-## 2.3. Proyecto de ASP.net
+## 2.2. Proyecto de ASP.net
 
 Lo siguiente que necesito es crear un proyecto de ASP.net, pero para crear este tipo de proyectos necesitamos instalarnos el plugin de ASP.net en el Visual Studio 2022, el cual puede llegar a ocupar 5Gb más o menos (ojo, todo esto en VisualStudio, no VisualCode).
 
@@ -62,13 +82,13 @@ Haremos una prueba sencilla, y a la plantilla de base que viene cuando creamos e
 
 ![](./img/18.png)
 
-## 2.4. Entramos en el IIS
+## 2.3. Entramos en el IIS
 
 Ahora tenemos que conectarnos a nuestros WS2012 y abrir el Server Manager, para a su vez, abrir el IIS.
 
 ![](./img/19.png)
 
-## 2.5. El dashboard del IIS
+## 2.4. El dashboard del IIS
 
 Vamos a conocer un poco más de cerca el dashboard del IIS para familiarizarnos con él.
 
@@ -98,7 +118,7 @@ Nota: Para no tener que instalar los 5 Gb del plugin de ASP.net en nuestro orden
 
 https://drive.google.com/drive/folders/1KHRxOgACAQk6mMtMP3IBgOCLMrLcWwG0?usp=sharing
 
-## 2.6. Permisos
+## 2.5. Permisos
 
 Un detalle muy importante que debemos tener en cuenta es, cambiar los permisos de la carpeta de nuestro proyecto (app2). Debemos incluir el grupo de IIS-USERS y otorgarle el FullControl.
 
@@ -110,7 +130,7 @@ Nota: A cada paso que hagamos, y por consiguiente, después de cada cambio que r
 
 ![](./img/26.png)
 
-## 2.7. Default Document
+## 2.6. Default Document
 
 El siguiente paso será definir el DefaultDocument de nuestro proyecto (el archivo.dll).
 
@@ -134,7 +154,7 @@ Una vez lo hayamos conseguido de esta forma, finalmente acabaremos cerrando el p
 
 ![](./img/31.png)
 
-## 2.8. ASP.NET Core Runtime
+## 2.7. ASP.NET Core Runtime
 
 El siguiente paso es muy sencillo, ya que tan sólo consiste en que tenemos que instalar desde/en nuestro WS2012, el ASP.net Core Runtime, ya que sin ésto, nada de lo que hemos hecho funcionaría, y no se podría hacer efectivo el despliegue de nuestro proyecto.
 
@@ -142,7 +162,7 @@ El siguiente paso es muy sencillo, ya que tan sólo consiste en que tenemos que 
 
 ![](./img/33.png)
 
-## 2.9. Comprobación local
+## 2.8. Comprobación local
 
 Ahora ya tan sólo tenemos que hacerle un Restart al IIS, y si nos vamos al Chrome del WS2012, y ponemos en la URL el localhost con el puerto 8070... vemos que funciona!
 
@@ -150,7 +170,7 @@ Ahora ya tan sólo tenemos que hacerle un Restart al IIS, y si nos vamos al Chro
 
 Nota: Aparte de que podemos manejar el IIS en general con Start, Stop, y Restart, debemos saber que estas opciones también están disponibles para cada proyecto, con lo cual podemos activar o desactivar cualquier proyecto en cualquier momento de manera fácil y rápida cuando lo necesitemos.
 
-## 2.10. Nuevo server block y subdominio
+## 2.9. Nuevo server block y subdominio
 
 Ahora pasamos a la parte final de este objetivo, el verdadero despliegue de nuestro proyecto en internet... con un redireccionamiento hacia Nginx...
 
@@ -181,7 +201,7 @@ server {
 
 Nota: No olvidarnos de reiniciar Nginx después de crear el nuevo server block.
 
-## 2.11. Cerrar el puerto del WS
+## 2.10. Cerrar el puerto del WS
 
 Por último, la "prueba de fuego" de siempre, cerrar el puerto 8070 del Firewall del WS2012 (a través del grupo de seguridad de la instancia ec2 del WS2012 en AWS). 
 
@@ -191,7 +211,7 @@ El grupo de seguridad de nuestra instancia WS2012 debe quedar así:
 
 ![](./img/37.png)
 
-## 2.12. Comprobación final
+## 2.11. Comprobación final
 
 Ahora vamos a probar a poner en el Chrome de nuestro ordenador el nuevo subdominio... y comprobamos que funciona perfectamente! Proyecto desplegado con éxito y objetivo conseguido!
 
