@@ -1,3 +1,45 @@
+# Tabla de Contenidos
+
+<!-- TOC -->
+
+- [1. Instalar y configurar Tomcat](#instalar-y-configurar-tomcat)
+    - [1.1. Instalar Tomcat](#instalar-tomcat)
+    - [1.2. Configurar Tomcat](#configurar-tomcat)
+        - [1.2.1. Usuarios](#usuarios)
+    - [1.3. VirtualHost en Tomcat](#virtualhost-en-tomcat)
+        - [1.3.1. webapps](#webapps)
+        - [1.3.2. server.xml](#serverxml)
+        - [1.3.3. Crear el subdominio](#crear-el-subdominio)
+        - [1.3.4. Registro tipo A](#registro-tipo-a)
+        - [1.3.5. Volvemos al server.xml](#volvemos-al-serverxml)
+        - [1.3.6. Propietarios](#propietarios)
+    - [1.4. Subir la app](#subir-la-app)
+- [2. EXTRA. ¿Cómo hacer un proyecto en VS y exportarlo a .war?](#extra-%C2%BFc%C3%B3mo-hacer-un-proyecto-en-vs-y-exportarlo-a-war)
+    - [2.1. Extensión en VS](#extensi%C3%B3n-en-vs)
+    - [2.2. Crear el proyecto en JSP](#crear-el-proyecto-en-jsp)
+    - [2.3. Exportar el proyecto](#exportar-el-proyecto)
+        - [2.3.1. Instalar Maven](#instalar-maven)
+        - [2.3.2. Descompresión del zip y ubicación](#descompresi%C3%B3n-del-zip-y-ubicaci%C3%B3n)
+        - [2.3.3. Variable de entorno Path](#variable-de-entorno-path)
+        - [2.3.4. Variable de entorno Maven](#variable-de-entorno-maven)
+        - [2.3.5. Comprobación final](#comprobaci%C3%B3n-final)
+    - [2.4. Comando final](#comando-final)
+- [3. Despliegue del proyecto de maven en JSP](#despliegue-del-proyecto-de-maven-en-jsp)
+    - [3.1. Subir el proyecto](#subir-el-proyecto)
+    - [3.2. Autodescompresión](#autodescompresi%C3%B3n)
+    - [3.3. Colocar el proyecto en su carpeta](#colocar-el-proyecto-en-su-carpeta)
+    - [3.4. Propietarios](#propietarios)
+    - [3.5. Resultado en navegador](#resultado-en-navegador)
+- [4. Nginx Proxy](#nginx-proxy)
+    - [4.1. Netstat](#netstat)
+    - [4.2. Server block](#server-block)
+        - [Resumen server block](#resumen-server-block)
+    - [4.3. Creamos el subdominio](#creamos-el-subdominio)
+    - [4.4. Cerrar puerto y resetear](#cerrar-puerto-y-resetear)
+        - [Preguntas de Examen](#preguntas-de-examen)
+
+<!-- /TOC -->
+
 # 1. Instalar y configurar Tomcat
 
 Nota: Para el primer objetivo de Tomcat, he usado el puerto 8079 (porque en la red del instituto tienen bloqueado el puerto 8080), pero el puerto más comunmente usado para el Tomcat es el 8080.
