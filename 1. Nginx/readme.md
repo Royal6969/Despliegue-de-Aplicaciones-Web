@@ -1,3 +1,38 @@
+# Tabla de Contenidos
+
+<!-- TOC -->
+
+- [1. Configurar Nginx](#configurar-nginx)
+    - [1.1. Instalar Nginx y PHP](#instalar-nginx-y-php)
+    - [1.2. Vamos al archivo php.ini](#vamos-al-archivo-phpini)
+    - [1.3. Buscamos la línea en la que pone](#buscamos-la-l%C3%ADnea-en-la-que-pone)
+    - [1.4. La descomentamos y la igualamos a 0](#la-descomentamos-y-la-igualamos-a-0)
+- [2. Configurar php-fpm](#configurar-php-fpm)
+    - [2.1. Modificamos Listen... ponemos](#modificamos-listen-ponemos)
+    - [2.2. Usuario con el que se ejecuta php-fpm](#usuario-con-el-que-se-ejecuta-php-fpm)
+    - [2.3. Lista de usuarios a los que php-fpm escuchará](#lista-de-usuarios-a-los-que-php-fpm-escuchar%C3%A1)
+    - [2.4. Configurar el servicio php-fpm](#configurar-el-servicio-php-fpm)
+- [3. Configuración del server block](#configuraci%C3%B3n-del-server-block)
+    - [3.1. Vamos a crear un archivo en la ruta /etc/nginx/conf.d/](#vamos-a-crear-un-archivo-en-la-ruta-etcnginxconfd)
+    - [3.2. Dentro de él, vamos a poner lo siguiente:](#dentro-de-%C3%A9l-vamos-a-poner-lo-siguiente)
+    - [3.3. Ahora vamos a la ruta que hemos definido como Document Root de Nginx](#ahora-vamos-a-la-ruta-que-hemos-definido-como-document-root-de-nginx)
+    - [3.4. Dentro de este index.php definiremos la clásica función que nos informa acerca de todas las características de nuestro php](#dentro-de-este-indexphp-definiremos-la-cl%C3%A1sica-funci%C3%B3n-que-nos-informa-acerca-de-todas-las-caracter%C3%ADsticas-de-nuestro-php)
+    - [3.5. De nuevo hacemos un reseteo](#de-nuevo-hacemos-un)
+- [4. Despliegue en Nginx](#despliegue-en-nginx)
+    - [4.1. Vamos primero a por el portfolio](#vamos-primero-a-por-el-portfolio)
+    - [4.2. Cambiamos los permisos del grupo](#cambiamos-los-permisos-del-grupo)
+    - [4.3. Server block](#server-block)
+    - [4.4. Reseteamos Nginx](#reseteamos-nginx)
+        - [Resumen server block](#resumen-server-block)
+- [5. Wordpress](#wordpress)
+    - [5.1. Una vez dentro del DirectoryRoot de Nginx...](#una-vez-dentro-del-directoryroot-de-nginx)
+    - [5.2. Entramos en MySQL](#entramos-en-mysql)
+    - [5.3. Ahora vamos a crear y configurar un nuevo server block para wordpress](#ahora-vamos-a-crear-y-configurar-un-nuevo-server-block-para-wordpress)
+        - [Resumen server block](#resumen-server-block)
+- [Preguntas de Examen:](#preguntas-de-examen)
+
+<!-- /TOC -->
+
 # 1. Instalar y Configurar Nginx
 
 ## 1.1. Instalar Nginx y PHP
