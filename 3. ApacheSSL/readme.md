@@ -91,7 +91,7 @@ PEM pass phrase: tupassword
 
 Vamos a crear una SOLICITUD de certificado (no el certificado en sí).
 
-Nota: Recordar que seguimos en el directorio de configuración de Nginx
+**Nota**: Recordar que seguimos en el directorio de configuración de Nginx
 
 `openssl req -new -keyout ApacheSSL.key -out SolicitudApacheSSL.csr`
 
@@ -113,11 +113,11 @@ Video Extra 2: https://www.youtube.com/watch?v=y97QhzWNc7M
 
 # 3. Configuración de Apache
 
-Nota: Hay que asegurarse de que el Apache tiene el módulo ssl. Se trata de un driver que Apache incorpora al arrancar y con el que es capaz de usar encriptación SSL.
+**Nota**: Hay que asegurarse de que el Apache tiene el módulo ssl. Se trata de un driver que Apache incorpora al arrancar y con el que es capaz de usar encriptación SSL.
 
 `sudo yum install -y mod_ssl`
 
-Nota: Si no lo instalamos … cualquiera de los parámetros de configuración SSL de Apache daría un error tipo Directiva desconocida.
+**Nota**: Si no lo instalamos … cualquiera de los parámetros de configuración SSL de Apache daría un error tipo Directiva desconocida.
 
 La instancia tiene ahora los archivos siguientes que utiliza para configurar el servidor seguro y crear un certificado para pruebas:
 
@@ -133,7 +133,7 @@ Este certificado es útil para probar si Apache está configurado correctamente 
 
 Dado que no ofrece ninguna prueba de identidad, no se debería utilizar en producción. Si se utiliza en la producción, dispara advertencias en los navegadores web.
 
-Nota: en este punto me doy cuenta de que los dos puntos anteriores, debería haberlos hecho en la carpeta etc/httpd/conf/ y no en la carpeta etc/httpd/conf.d/, así que he movido los archivo de sitio.
+**Nota**: en este punto me doy cuenta de que los dos puntos anteriores, debería haberlos hecho en la carpeta etc/httpd/conf/ y no en la carpeta etc/httpd/conf.d/, así que he movido los archivo de sitio.
 
 ![](./img/6.png)
 
@@ -193,7 +193,7 @@ Vamos a abrir nuestra web ahora en firefox, poniendo en la URL https://tudominio
 
 Video Extra: https://www.youtube.com/watch?v=O98FZABHSgw
 
-## 4.1. Privacidad/Seguridad --> Certificados
+## 4.2. Privacidad/Seguridad --> Certificados
 
 Si en el Firefox, le doy a configuración, y a Privacidad/Seguridad, y bajo hasta abajo del todo hasta la parte de certificados … compruebo que nuestra AutoridadCertificadora ya está instalada (importada)
 
@@ -206,7 +206,7 @@ Si volvemos a poner nuestra direccion (https://tudominio.com)
 ![](./img/17.png)
 
 
-Nota: Bad certificate domain error
+**Nota**: Bad certificate domain error
 
 En este video, el profesor me ha dado a entender que haría falta un certificado por cada DNS.
 
@@ -252,7 +252,7 @@ Para ver las propiedades de la solicitud ejecutamos el comando …
 ![](./img/24.png)
 
 
-Nota: Para tenerlo finalmente tan bien ordenado como el profesor, he creado un directorio en /etc/ que se llama certs, y he movido los archivos que he ido generando hacia tal directorio … sin olvidar cambiar las direcciones de tales archivos en mi ssl.conf
+**Nota**: Para tenerlo finalmente tan bien ordenado como el profesor, he creado un directorio en /etc/ que se llama certs, y he movido los archivos que he ido generando hacia tal directorio … sin olvidar cambiar las direcciones de tales archivos en mi ssl.conf
 
 ![](./img/25.png)
 
@@ -312,13 +312,13 @@ ADVERTENCIA:
 
 ![](./img/37.png)
 
-Nota: le puse de broma en la Organización, “Amazon”, pero sí que es real que es Amazon la CA que tiene dentro la mía de FakeZone
+**Nota**: le puse de broma en la Organización, “Amazon”, pero sí que es real que es Amazon la CA que tiene dentro la mía de FakeZone
 
 - Para que finalmente funcionase, tuve que darle al botón de “Editar” y pulsar la opción de que esta CA (la mía) pudiera reconocer sitios web (resulta que esta traducción de Firefox al español está mal traducida y por eso no la había visto bien antes...)
 
 ![](./img/38.png)
 
-Nota: No borrar el historial, tan sólo reiniciar Firefox, y ya sí funciona el https:// en Firefox también.
+**Nota**: No borrar el historial, tan sólo reiniciar Firefox, y ya sí funciona el https:// en Firefox también.
 
 ### ACLARACIÓN FINAL 1:
 
@@ -346,7 +346,7 @@ Yendo a la configuración → Privacidad y Seguridad → Seguridad → Gestionar
 
 ![](./img/42.png)
 
-Nota: Por último, el profesor me pregunta que cuáles son los archivos que indico en el vHost del SSL …
+**Nota**: Por último, el profesor me pregunta que cuáles son los archivos que indico en el vHost del SSL …
 
 - tudominio.crt es mi certificado
 - tudominio.key es mi clave privada
