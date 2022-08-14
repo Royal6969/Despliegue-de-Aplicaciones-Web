@@ -38,7 +38,7 @@ Vamos a la carpeta de /opt/ y creamos una carpeta llamada /opt/apps/ y en ella, 
 
 `wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/nvm.sh | bash`
 
-Nota: Consulta cuál es la versión más actual en la documentación oficial de NVM: https://github.com/nvm-sh/nvm
+**Nota**: Consulta cuál es la versión más actual en la documentación oficial de NVM: https://github.com/nvm-sh/nvm
 
 ## 1.2. Ejecutar el cli
 
@@ -72,7 +72,7 @@ Ahora vamos a instalar el gestor de paquetes NPM:
 
 ![](./img/4.png)
 
-Nota: Para instalar la versión de npm más reciente y estable, en vez del número de la versión, poner latest:
+**Nota**: Para instalar la versión de npm más reciente y estable, en vez del número de la versión, poner latest:
 
 `npm install -g npm@latest`
 
@@ -85,9 +85,9 @@ Para subir el proyecto, podemos hacerlo de dos formas:
 - o bien subimos todo un proyecto entero por FileZilla
 - o en el servidor hacemos el `git clone repository-url` y subimos por FileZilla sólo los módulos
 
-Nota: No instalar los módulos desde el servidor, es decir, mejor no hacer el `npm install` en el servidor, porque algunos compañeros han experimentado cambios en su  configuración general del servidor, como hasta cambios de IPs, etc ...)
+**Nota**: No instalar los módulos desde el servidor, es decir, mejor no hacer el `npm install` en el servidor, porque algunos compañeros han experimentado cambios en su  configuración general del servidor, como hasta cambios de IPs, etc ...)
 
-Nota: El proyecto debe tener hecho previamente el `npm build` (o `ng build`, o según cual sea el framework), es decir, debe contener también la carpeta de “dist”.
+**Nota**: El proyecto debe tener hecho previamente el `npm build` (o `ng build`, o según cual sea el framework), es decir, debe contener también la carpeta de “dist”.
 
 ## 1.5. Server Block
 
@@ -127,9 +127,9 @@ server.listen(port, hostname, () => {
 });
 ```
 
-Nota: Teniendo en cuenta el server block que hicimos antes... el hostname tiene que ser el localhost, y el puerto debe ser el 3000 porque es el que pusimos para el proxy_pass.
+**Nota**: Teniendo en cuenta el server block que hicimos antes... el hostname tiene que ser el localhost, y el puerto debe ser el 3000 porque es el que pusimos para el proxy_pass.
 
-Nota: Se recomienda ubicar las aplicaciones y proyectos en el famoso directorio de /opt/ ... es decir, para mantener una buena organización, podríamos crear (o llevar) este archivo js hacia, por ejemplo, /opt/apps/node/x.js
+**Nota**: Se recomienda ubicar las aplicaciones y proyectos en el famoso directorio de /opt/ ... es decir, para mantener una buena organización, podríamos crear (o llevar) este archivo js hacia, por ejemplo, /opt/apps/node/x.js
 
 ## 1.7. Creamos el subdominio
 
@@ -153,7 +153,7 @@ Igual que antes, tenemos que crear en Ionos un nuevo subdominio (apuntando a la 
 
 ![](./img/5.png)
 
-Nota: en mi caso, ya he hecho alguna que otra prueba, y por eso voy ya por el subdominio "nodeprueba3"
+**Nota**: en mi caso, ya he hecho alguna que otra prueba, y por eso voy ya por el subdominio "nodeprueba3"
 
 ## 2.2. Server block
 
@@ -174,15 +174,15 @@ server {
 }
 ```
 
-Nota: Para el proxy_pass he puesto el puerto 8080, porque luego, cuando vaya a usar el Http-Server, éste utiliza predeterminadamente este puerto.
+**Nota**: Para el proxy_pass he puesto el puerto 8080, porque luego, cuando vaya a usar el Http-Server, éste utiliza predeterminadamente este puerto.
 
 ## 2.3. Subimos un proyecto
 
 Vamos a crear un nuevo proyecto, o cogemos cualquiera que hayamos hecho durante el grado, y lo subimos al servidor con filezilla, o lo descargamos de GitHub en el servidor.
 
-Nota: en mi caso, voy a reutilizar un proyecto de Angular.
+**Nota**: en mi caso, voy a reutilizar un proyecto de Angular.
 
-Nota: No te olvides de generar la carpeta dist ejecutando el comando de `npm build` (o `ng build` en mi caso en Angular).
+**Nota**: No te olvides de generar la carpeta dist ejecutando el comando de `npm build` (o `ng build` en mi caso en Angular).
 
 ## 2.4. Http-Server
 
@@ -242,7 +242,7 @@ Y ahora solo queda ejecutar el comando http-server apuntando a la carpeta del pr
 
 ![](./img/7.png)
 
-Nota: Vemos que dice "Avaible on: http://127.0.0.1:8080", que es justo donde tenemos el proxy_pass.
+**Nota**: Vemos que dice "Avaible on: http://127.0.0.1:8080", que es justo donde tenemos el proxy_pass.
 
 Y si ahora vamos al Chrome y ponemos en la URL "nodeprueba3.tudominio.com", comprobamos que se accede de forma directa y segura al proyecto desplegado en cuestión.
 
