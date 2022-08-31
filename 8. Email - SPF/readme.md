@@ -1,3 +1,35 @@
+# Tabla de Contenidos
+
+<!-- TOC -->
+
+- [Correo Electrónico - SPF](#correo-electr%C3%B3nico---spf)
+- [1. Añadir el registro DNS](#a%C3%B1adir-el-registro-dns)
+- [2. ¿Qué es un registro DNS tipo SPF?](#%C2%BFqu%C3%A9-es-un-registro-dns-tipo-spf)
+        - [Resumen](#resumen)
+    - [2.1. Formato del Registro SPF](#formato-del-registro-spf)
+        - [Resumen](#resumen)
+    - [2.2. Mecanismos(etiquetas) del Registro SPF](#mecanismosetiquetas-del-registro-spf)
+        - [Resumen de nuestros mecanismos SPF](#resumen-de-nuestros-mecanismos-spf)
+    - [2.3. Calificadores de Registro SPF](#calificadores-de-registro-spf)
+    - [2.4. Ejemplos de cómo funciona SPF en diferentes situaciones](#ejemplos-de-c%C3%B3mo-funciona-spf-en-diferentes-situaciones)
+        - [Ejemplo 1](#ejemplo-1)
+        - [Ejemplo 2](#ejemplo-2)
+        - [Ejemplo 3](#ejemplo-3)
+- [3. Activar el email de IONOS](#activar-el-email-de-ionos)
+        - [Comprobación final - prueba de email](#comprobaci%C3%B3n-final---prueba-de-email)
+    - [Resources](#resources)
+        - [Definir el registro SPF: configuración avanzada](#definir-el-registro-spf-configuraci%C3%B3n-avanzada)
+        - [Cómo Microsoft 365 usa el marco de directivas de remitente SPF para evitar la suplantación de identidad](#c%C3%B3mo-microsoft-365-usa-el-marco-de-directivas-de-remitente-spf-para-evitar-la-suplantaci%C3%B3n-de-identidad)
+- [4. Pasos siguientes: DKIM y DMARC](#pasos-siguientes-dkim-y-dmarc)
+    - [4.1. Evitar el spoofing y el spam con SPF](#evitar-el-spoofing-y-el-spam-con-spf)
+    - [4.2. Evitar el spoofing y el spam con DKIM](#evitar-el-spoofing-y-el-spam-con-dkim)
+    - [4.3. Evitar el spoofing y el spam con DMARC](#evitar-el-spoofing-y-el-spam-con-dmarc)
+- [5. Prueba final - Ejemplo práctico - Pregunta Teoría](#prueba-final---ejemplo-pr%C3%A1ctico---pregunta-teor%C3%ADa)
+    - [¿Por qué Google pone el interrogante rojo?](#%C2%BFpor-qu%C3%A9-google-pone-el-interrogante-rojo)
+    - [Respuesta](#respuesta)
+
+<!-- /TOC -->
+
 # Correo Electrónico - SPF
 
 # 1. Añadir el registro DNS
