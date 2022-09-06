@@ -54,3 +54,13 @@ Nota 8: Cuando alguna vez experimentemos algún error que impida ver el desplieg
 Nota 9: El objetivo final de la Firma Digital, también está subdividido en dos objetivos diferentes, por un lado, realizamos la firma digital de un documento pdf mediante un certificado "falso" que nosotros mismos habremos creado previamentea través de los comandos aprendidos en el objetivo del ApacheSSL, y por otro lado, realizamos la firma digital de un documento pdf mediante un certificado avalado por el Gobierno a través de la Fábrica Nacional de Moneda y Timbre (para el cual tendremos que realizar previamente una serie de pasos en la Administración Pública para acreditar nuestra identidad como persona física).
 
 Nota 10: A medida que se vaya avanzando y progresando en los diferentes objetivos del curso, y sobretodo a partir del objetivo del NginxSSL (que es donde se empieza a tocar el tema de la ciberseguridad), podremos encontrar con más frecuencia, algunos apartados que contienen solamente teoría. Es muy importante que usted no prescinda de la lectura, comprensión y estudio de estos apartados de teoría, ya que también es una información muy valiosa, la cual ha sido investigada, cotejada y extraída de múltiples fuentes web, y mediante la necesidad de superar sin problemas las pruebas finales del profesor en cada uno de los objetivos.
+
+## GNU Free Documentation License
+
+Copyright (C)  2022  Sergio Díaz Campos.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
