@@ -27,6 +27,7 @@
 - [5. Prueba final - Ejemplo práctico - Pregunta Teoría](#prueba-final---ejemplo-pr%C3%A1ctico---pregunta-teor%C3%ADa)
     - [¿Por qué Google pone el interrogante rojo?](#%C2%BFpor-qu%C3%A9-google-pone-el-interrogante-rojo)
     - [Respuesta](#respuesta)
+- [GNU Free Documentation License](#gnu-free-documentation-license)
 
 <!-- /TOC -->
 
@@ -321,3 +322,13 @@ u en otras palabras, que hemos podido recibir ese falso email, pero automáticam
 Received-SPF: softfail (google.com: domain of transitioning nocontestarenestacuenta@compulease.es does not designate 178.33.117.241 as permitted sender) client-ip=178.33.117.241;
 
 incluso en esta segunda sentencia que encontramos en la información del mensaje original, **Google nos avisa de que la dirección IP_client del mensaje, no coincide con ninguna especificada en ningún valor del registro SPF de compulease.es, donde se indican los servidores autorizados y permitidos. con lo que, el remitente de este sospechoso mensaje, no es el propietario del dominio que parece que lo ha enviado**.
+
+## GNU Free Documentation License
+
+Copyright (C)  2022  Sergio Díaz Campos.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
