@@ -32,6 +32,7 @@
     - [6.2. Firefox](#firefox)
         - [ACLARACIÓN FINAL 1:](#aclaraci%C3%B3n-final-1)
         - [ACLARACIÓN FINAL 2:](#aclaraci%C3%B3n-final-2)
+- [GNU Free Documentation License](#gnu-free-documentation-license)
 
 <!-- /TOC -->
 
@@ -351,3 +352,13 @@ Yendo a la configuración → Privacidad y Seguridad → Seguridad → Gestionar
 - tudominio.crt es mi certificado
 - tudominio.key es mi clave privada
 - JeffBezos.crt es el certificado público de la autoridad (cualquier ordenador que tenga este certificado de autoridad, puede reconocer mi certificado)
+
+## GNU Free Documentation License
+
+Copyright (C)  2022  Sergio Díaz Campos.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
