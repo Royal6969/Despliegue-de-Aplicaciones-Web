@@ -28,6 +28,7 @@
         - [3.2.4. Descarga de su Certificado de Usuario.](#descarga-de-su-certificado-de-usuario)
     - [3.3. Descarga del certificado digital, instalación y consulta](#descarga-del-certificado-digital-instalaci%C3%B3n-y-consulta)
     - [3.4. Firmar un documento digitalmente](#firmar-un-documento-digitalmente)
+- [GNU Free Documentation License](#gnu-free-documentation-license)
 
 <!-- /TOC -->
 
@@ -309,3 +310,13 @@ Aproximadamente una hora después de que haya acreditado su identidad en una Ofi
 Al igual que hicimos al final del primer objetivo con la firma digital "falsa", volvemos a preparar previamente un documento pdf sencillo, y lo firmamos digitalmente con el programa de AutoFirma, pero esta vez, eligiendo nuestra firma real certificada por el Gobierno (FNMT).
 
 Le enviamos este nuevo documento firmado al profesor por email, y ya habríamos logrado también este objetivo.
+
+## GNU Free Documentation License
+
+Copyright (C)  2022  Sergio Díaz Campos.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
