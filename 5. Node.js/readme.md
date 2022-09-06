@@ -18,6 +18,7 @@
     - [2.4. Http-Server](#http-server)
     - [2.5. Reseteo y despliegue](#reseteo-y-despliegue)
         - [Nota sobre el examen](#nota-sobre-el-examen)
+- [GNU Free Documentation License](#gnu-free-documentation-license)
 
 <!-- /TOC -->
 
@@ -251,3 +252,13 @@ Y si ahora vamos al Chrome y ponemos en la URL "nodeprueba3.tudominio.com", comp
 ### Nota sobre el examen
 
 Nota: sobre el examen de este objetivo, será relativamente sencillo y liviano. Tan sólo deberás tener claro lo que es Node, NVM y NPM; y volver a repasar el Nginx Proxy, para lo cual, encontrarás fácilmente decenas de artículos en Google y decenas de videos en YouTube.
+
+## GNU Free Documentation License
+
+Copyright (C)  2022  Sergio Díaz Campos.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
