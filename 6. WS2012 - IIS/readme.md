@@ -15,6 +15,7 @@
     - [2.9. Nuevo server block y subdominio](#nuevo-server-block-y-subdominio)
     - [2.10. Cerrar el puerto del WS](#cerrar-el-puerto-del-ws)
     - [2.11. Comprobación final](#comprobaci%C3%B3n-final)
+- [GNU Free Documentation License](#gnu-free-documentation-license)
 
 <!-- /TOC -->
 
@@ -216,3 +217,13 @@ El grupo de seguridad de nuestra instancia WS2012 debe quedar así:
 Ahora vamos a probar a poner en el Chrome de nuestro ordenador el nuevo subdominio... y comprobamos que funciona perfectamente! Proyecto desplegado con éxito y objetivo conseguido!
 
 ![](./img/39.png)
+
+## GNU Free Documentation License
+
+Copyright (C)  2022  Sergio Díaz Campos.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
