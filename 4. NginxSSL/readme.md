@@ -24,6 +24,7 @@
     - [6.4. CAA](#caa)
     - [6.5. Preloaders](#preloaders)
     - [6.6. OCSP Stapling](#ocsp-stapling)
+- [GNU Free Documentation License](#gnu-free-documentation-license)
 
 <!-- /TOC -->
 
@@ -433,3 +434,13 @@ Para mitigar estos problemas de escalado, los navegadores y las CA diseñaron e 
 Los navegadores ahora pueden contactar a un respondedor para solicitar el estado de revocación de un solo certificado emitido por la CA, en lugar de tener que adquirir y procesar toda la CRL.
 
 Los respondedores de OCSP firman sus respuestas con la clave de firma privada de la CA, y los navegadores pueden verificar que el estado de revocación que recibieron fue realmente generado por la CA real.
+
+## GNU Free Documentation License
+
+Copyright (C)  2022  Sergio Díaz Campos.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
