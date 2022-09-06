@@ -30,6 +30,7 @@
     - [4.1. X-Content-Type-Option](#x-content-type-option)
     - [4.2. X-Frame](#x-frame)
     - [4.3. XSS-Protection](#xss-protection)
+- [GNU Free Documentation License](#gnu-free-documentation-license)
 
 <!-- /TOC -->
 
@@ -555,3 +556,13 @@ Tiene 4 posibles directivas:
 - 0: filtro deshabilitado 
 - 1: filtro habilitado (sana partes)
 - 1: mode-block: bloquea toda la página.
+
+## GNU Free Documentation License
+    
+Copyright (C)  2022  Sergio Díaz Campos.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
