@@ -30,6 +30,7 @@
     - [5.3. Ahora vamos a crear y configurar un nuevo server block para wordpress](#ahora-vamos-a-crear-y-configurar-un-nuevo-server-block-para-wordpress)
         - [Resumen server block](#resumen-server-block)
 - [Preguntas de Examen:](#preguntas-de-examen)
+- [GNU Free Documentation License](#gnu-free-documentation-license)
 
 <!-- /TOC -->
 
@@ -503,3 +504,13 @@ Video Extra 1: https://www.youtube.com/watch?v=8B5wLDpkz0c
 Video Extra 2: https://www.youtube.com/watch?v=HyxatbU40x8
 
 Video Extra 3: https://www.youtube.com/watch?v=39uiw0NNozg
+
+## GNU Free Documentation License
+
+Copyright (C)  2022  Sergio Díaz Campos.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
