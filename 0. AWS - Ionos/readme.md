@@ -26,6 +26,7 @@
     - [5.1. Error httpd](#error-httpd)
     - [5.2. Error wordpress css](#error-wordpress-css)
     - [5.3. El super error de wordpress](#el-super-error-de-wordpress)
+- [GNU Free Documentation License](#gnu-free-documentation-license)
 
 <!-- /TOC -->
 
@@ -318,3 +319,13 @@ La causa de este error fue una extraña mezcla entre diferentes versiones de PHP
 3. meterse dentro del archivo de este repositorio y poner en todo (menos en la parte de epel) enable=1
 4. Ahora instalar todos los paquetes de php normales... `sudo yum install php*`... y habiendo hecho lo de antes, se supone que se activarán en sus versiones 8 y apuntando hacia el repositorio de amzn2extras
 5. Por lo demás, instalar normal el wordpress, haciendo previamente lo del usuario y su base de datos, etc... y wordpress se instala bien y funciona perfectamente.
+
+## GNU Free Documentation License
+
+Copyright (C)  2022  Sergio Díaz Campos.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
