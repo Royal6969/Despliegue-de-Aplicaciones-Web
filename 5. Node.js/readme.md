@@ -1,26 +1,21 @@
 # Tabla de Contenidos
 
-<!-- TOC -->
-
-- [1. Node JS](#node-js)
-    - [1.1. NVM CLI](#nvm-cli)
-    - [1.2. Ejecutar el cli](#ejecutar-el-cli)
-    - [1.3. NPM](#npm)
-    - [1.4. Subir un proyecto al servidor](#subir-un-proyecto-al-servidor)
-    - [1.5. Server Block](#server-block)
-    - [1.6. Archivo js](#archivo-js)
-    - [1.7. Creamos el subdominio](#creamos-el-subdominio)
-    - [1.8. Reseteo y despliegue](#reseteo-y-despliegue)
-- [2. Extra - Http-Server](#extra---http-server)
-    - [2.1. Nuevo subdominio](#nuevo-subdominio)
-    - [2.2. Server block](#server-block)
-    - [2.3. Subimos un proyecto](#subimos-un-proyecto)
-    - [2.4. Http-Server](#http-server)
-    - [2.5. Reseteo y despliegue](#reseteo-y-despliegue)
-        - [Nota sobre el examen](#nota-sobre-el-examen)
-- [GNU Free Documentation License](#gnu-free-documentation-license)
-
-<!-- /TOC -->
+- [1. Node JS](#1-node-js)
+  - [1.1. NVM CLI](#11-nvm-cli)
+  - [1.2. Ejecutar el cli](#12-ejecutar-el-cli)
+  - [1.3. NPM](#13-npm)
+  - [1.4. Subir un proyecto al servidor](#14-subir-un-proyecto-al-servidor)
+  - [1.5. Server Block](#15-server-block)
+  - [1.6. Archivo js](#16-archivo-js)
+  - [1.7. Creamos el subdominio](#17-creamos-el-subdominio)
+  - [1.8. Reseteo y despliegue](#18-reseteo-y-despliegue)
+- [2. Extra - Http-Server](#2-extra---http-server)
+  - [2.1. Nuevo subdominio](#21-nuevo-subdominio)
+  - [2.2. Server block](#22-server-block)
+  - [2.3. Subimos un proyecto](#23-subimos-un-proyecto)
+  - [2.4. Http-Server](#24-http-server)
+  - [2.5. Reseteo y despliegue](#25-reseteo-y-despliegue)
+    - [Nota sobre el examen](#nota-sobre-el-examen)
 
 # 1. Node JS
 
