@@ -1,23 +1,18 @@
 # Tabla de Contenidos
 
-<!-- TOC -->
-
-- [1. Crear la instancia](#crear-la-instancia)
-- [2. Desplegar un proyecto con IIS](#desplegar-un-proyecto-con-iis)
-    - [2.1. Instalación del IIS](#instalaci%C3%B3n-del-iis)
-    - [2.2. Proyecto de ASP.net](#proyecto-de-aspnet)
-    - [2.3. Entramos en el IIS](#entramos-en-el-iis)
-    - [2.4. El dashboard del IIS](#el-dashboard-del-iis)
-    - [2.5. Permisos](#permisos)
-    - [2.6. Default Document](#default-document)
-    - [2.7. ASP.NET Core Runtime](#aspnet-core-runtime)
-    - [2.8. Comprobación local](#comprobaci%C3%B3n-local)
-    - [2.9. Nuevo server block y subdominio](#nuevo-server-block-y-subdominio)
-    - [2.10. Cerrar el puerto del WS](#cerrar-el-puerto-del-ws)
-    - [2.11. Comprobación final](#comprobaci%C3%B3n-final)
-- [GNU Free Documentation License](#gnu-free-documentation-license)
-
-<!-- /TOC -->
+- [1. Crear la instancia](#1-crear-la-instancia)
+- [2. Desplegar un proyecto con IIS](#2-desplegar-un-proyecto-con-iis)
+  - [2.1. Instalación del IIS](#21-instalación-del-iis)
+  - [2.2. Proyecto de ASP.net](#22-proyecto-de-aspnet)
+  - [2.3. Entramos en el IIS](#23-entramos-en-el-iis)
+  - [2.4. El dashboard del IIS](#24-el-dashboard-del-iis)
+  - [2.5. Permisos](#25-permisos)
+  - [2.6. Default Document](#26-default-document)
+  - [2.7. ASP.NET Core Runtime](#27-aspnet-core-runtime)
+  - [2.8. Comprobación local](#28-comprobación-local)
+  - [2.9. Nuevo server block y subdominio](#29-nuevo-server-block-y-subdominio)
+  - [2.10. Cerrar el puerto del WS](#210-cerrar-el-puerto-del-ws)
+  - [2.11. Comprobación final](#211-comprobación-final)
 
 # 1. Crear la instancia
 
