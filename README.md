@@ -29,7 +29,7 @@ Con todo esto, quiero decir que, el alumno tiene la obligación de obedecer las 
 
 Este repositorio puede servir en algún caso al alumnado, como una ayuda extra y/o guía complementaria al curso del profesor en LDTS, pero en ningún caso y bajo ninguna circunstancia este repositorio debe convertirse en una guía que reemplace o sustituya al propio curso del profesor. Por otro lado, y teniendo en cuenta todo esto, yo (Sergio Díaz) no me responsabilizo de cualquier posible suspenso de un alumno que tan sólo haya seguido este repositorio para realizar toda la asignatura.
 
-Como referencia directa, quisiera dejar el siguiente enlace con el que podrás dirigirte al curso del profesor que compone esta asignatura, y el cual tendrás que seguir y superar obligatoriamente para aprobar: https://lab.ldts.es/course/servidores-web-avanzado/
+Como referencia directa, quisiera dejar el siguiente enlace con el que podrás dirigirte al curso del profesor que compone esta asignatura, y el cual tendrás que seguir y superar obligatoriamente para aprobar: https://lns130.ldts.us/
 
 ## Consideraciones y Notas
 
