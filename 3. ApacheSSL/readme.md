@@ -2,10 +2,6 @@
 
 - [HTTPS con Apache y OpenSSL](#https-con-apache-y-openssl)
 - [1. Autoridad Certificadora](#1-autoridad-certificadora)
-    - [Tutorial: configure SSl/TLS en Amazon Linux 2](#tutorial-configure-ssltls-en-amazon-linux-2)
-    - [Cómo crear un certificado SSL autofirmado para Apache en Ubuntu 20.04](#cómo-crear-un-certificado-ssl-autofirmado-para-apache-en-ubuntu-2004)
-    - [Crear autoridad certificadora (CA) y certificados autofirmados en Linux](#crear-autoridad-certificadora-ca-y-certificados-autofirmados-en-linux)
-    - [Habilitar SSL en la instancia de Apache en EC2](#habilitar-ssl-en-la-instancia-de-apache-en-ec2)
   - [1.1. Habilitar Apache](#11-habilitar-apache)
   - [1.2. Grupo de seguridad](#12-grupo-de-seguridad)
   - [1.3. Crear la CA](#13-crear-la-ca)
@@ -30,28 +26,15 @@
   - [6.2. Firefox](#62-firefox)
     - [ACLARACIÓN FINAL 1:](#aclaración-final-1)
     - [ACLARACIÓN FINAL 2:](#aclaración-final-2)
+- [Webgrafía y Referencias](#webgrafía-y-referencias)
+    - [Tutorial: configure SSl/TLS en Amazon Linux 2](#tutorial-configure-ssltls-en-amazon-linux-2)
+    - [Cómo crear un certificado SSL autofirmado para Apache en Ubuntu 20.04](#cómo-crear-un-certificado-ssl-autofirmado-para-apache-en-ubuntu-2004)
+    - [Crear autoridad certificadora (CA) y certificados autofirmados en Linux](#crear-autoridad-certificadora-ca-y-certificados-autofirmados-en-linux)
+    - [Habilitar SSL en la instancia de Apache en EC2](#habilitar-ssl-en-la-instancia-de-apache-en-ec2)
 
 # HTTPS con Apache y OpenSSL
 
 # 1. Autoridad Certificadora
-
-Para empezar a documentarme un poco sobre todo este tema, voy a leer y a comparar estas guías que he encontrado, y después elegiré la mejor para seguirla y hacer esta parte.
-
-### Tutorial: configure SSl/TLS en Amazon Linux 2
-
-https://docs.aws.amazon.com/es_es/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-2.html
-
-### Cómo crear un certificado SSL autofirmado para Apache en Ubuntu 20.04
-
-https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04-es
-
-### Crear autoridad certificadora (CA) y certificados autofirmados en Linux
-
-https://blog.guillen.io/2018/09/29/crear-autoridad-certificadora-ca-y-certificados-autofirmados-en-linux/
-
-### Habilitar SSL en la instancia de Apache en EC2
-
-https://www.it-swarm-es.com/es/apache/habilitar-ssl-en-la-instancia-de-apache-en-ec2/940599307/
 
 ## 1.1. Habilitar Apache
 
@@ -347,6 +330,26 @@ Yendo a la configuración → Privacidad y Seguridad → Seguridad → Gestionar
 - tudominio.crt es mi certificado
 - tudominio.key es mi clave privada
 - JeffBezos.crt es el certificado público de la autoridad (cualquier ordenador que tenga este certificado de autoridad, puede reconocer mi certificado)
+
+# Webgrafía y Referencias
+
+Para empezar a documentarme un poco sobre todo este tema, voy a leer y a comparar estas guías que he encontrado, y después elegiré la mejor para seguirla y hacer este objetivo.
+
+### Tutorial: configure SSl/TLS en Amazon Linux 2
+
+https://docs.aws.amazon.com/es_es/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-2.html
+
+### Cómo crear un certificado SSL autofirmado para Apache en Ubuntu 20.04
+
+https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04-es
+
+### Crear autoridad certificadora (CA) y certificados autofirmados en Linux
+
+https://blog.guillen.io/2018/09/29/crear-autoridad-certificadora-ca-y-certificados-autofirmados-en-linux/
+
+### Habilitar SSL en la instancia de Apache en EC2
+
+https://www.it-swarm-es.com/es/apache/habilitar-ssl-en-la-instancia-de-apache-en-ec2/940599307/
 
 ## GNU Free Documentation License
 
