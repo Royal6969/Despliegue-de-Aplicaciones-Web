@@ -18,7 +18,7 @@ Estas aplicaciones web serán desplegadas en un servidor Linux, el cual crearemo
 5. Node.js
 6. WS2012 - IIS
 7. Headers
-8. Email- SPF
+8. Email - SPF
 9. Firma Digital
 
 ## Disclaimer
