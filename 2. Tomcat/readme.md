@@ -46,7 +46,8 @@ Para instalar Tomcat y llegar a ver el Tomcat Manager en el navegador, he seguid
 
 https://techviewleo.com/install-tomcat-on-amazon-linux/
 
-Video Extra: https://www.youtube.com/watch?v=SMQjlcRmgiM
+Video Extra - Instalar Tomcat 9:  https://www.youtube.com/watch?v=DzLhABPzI90&ab_channel=Enkirus
+Video Extra - Instalar Tomcat 10: https://www.youtube.com/watch?v=1bnla8eYcaI&ab_channel=AshiqUmmathoor
 
 **Nota**: Después de seguir la guía, en el momento final de probar a ver el Tomcat Manager en el Chrome, no me salía … por qué??
 
