@@ -186,7 +186,7 @@ Ahora, al hacer el systemctl restart nginx, veo que me sigue dando un error, que
 
 Vamos a la carpeta del include, y ejecuto el siguiente comando:
 
-`openssl dhparam -out dhparams.pem 4096`
+`openssl dhparam -out dhparam.pem 4096`
 
 ![](./img/16.png)
 
